@@ -1,0 +1,246 @@
+(base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& "s:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Scripts\Activate.ps1")
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> cd "S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot"
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> streamlit run app/dashboard.py
+2026-10-15 19:47:08.910 Uvicorn server started on :::8501
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.23.224.200:8501
+
+  Help agents write better Streamlit apps?
+  Install the official Streamlit skills by running streamlit skills in your terminal.
+
+
+✓ Installed:
+  → .agents\skills\developing-with-streamlit
+  → .claude\skills\developing-with-streamlit
+
+✨ Successfully installed to S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot
+
+Note: Installed skills are symlinks to your local Streamlit environment.
+      They generally should not be committed to git.
+
+Recommended .gitignore snippet:
+  # Streamlit agent skills (environment-specific symlinks)
+  .agents\skills/developing-with-streamlit
+  .claude\skills/developing-with-streamlit
+2026-10-15 19:47:39.643 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:47:39.661 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:47:39.664 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:48:35.910 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:48:35.915 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:48:35.921 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:49:20.015 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:49:20.027 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:49:20.035 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:49:29.525 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:49:29.532 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:49:29.538 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:49:46.117 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:49:46.123 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:49:46.130 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:50:16.509 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:50:16.515 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:50:16.520 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:50:17.302 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:50:17.308 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-10-15 19:50:17.315 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+  Stopping...
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> python training/train_classifier.py --target priority --epochs 3 --batch-size 4
+Rows: total=28587, train=22869, validation=2859, test=2859
+Target=priority; classes=3; CUDA=True
+Map: 100%|███████████████████████████████████████████████████████████████| 22869/22869 [00:01<00:00, 21570.42 examples/s]
+Map: 100%|█████████████████████████████████████████████████████████████████| 2859/2859 [00:00<00:00, 19095.01 examples/s]
+Map: 100%|█████████████████████████████████████████████████████████████████| 2859/2859 [00:00<00:00, 18697.62 examples/s]
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at FacebookAI/xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'loss': 1.0635, 'grad_norm': 3.9664392471313477, 'learning_rate': 1.9771561771561775e-05, 'epoch': 0.03}                
+{'loss': 1.0678, 'grad_norm': 15.341500282287598, 'learning_rate': 1.953846153846154e-05, 'epoch': 0.07}                 
+{'loss': 1.0695, 'grad_norm': 3.473949670791626, 'learning_rate': 1.9305361305361307e-05, 'epoch': 0.1}                  
+{'loss': 1.072, 'grad_norm': 2.7767622470855713, 'learning_rate': 1.9072261072261072e-05, 'epoch': 0.14}                 
+{'loss': 1.0789, 'grad_norm': 2.267794609069824, 'learning_rate': 1.883916083916084e-05, 'epoch': 0.17}                  
+{'loss': 1.0586, 'grad_norm': 2.8101069927215576, 'learning_rate': 1.8606060606060607e-05, 'epoch': 0.21}                
+{'loss': 1.0599, 'grad_norm': 2.061579704284668, 'learning_rate': 1.8372960372960373e-05, 'epoch': 0.24}                 
+{'loss': 1.058, 'grad_norm': 2.804164409637451, 'learning_rate': 1.8139860139860142e-05, 'epoch': 0.28}                  
+{'loss': 1.0713, 'grad_norm': 4.36944580078125, 'learning_rate': 1.7906759906759907e-05, 'epoch': 0.31}                  
+{'loss': 1.0585, 'grad_norm': 2.504875659942627, 'learning_rate': 1.7673659673659676e-05, 'epoch': 0.35}                 
+{'loss': 1.0807, 'grad_norm': 3.353285551071167, 'learning_rate': 1.7440559440559442e-05, 'epoch': 0.38}                 
+{'loss': 1.0835, 'grad_norm': 2.5019543170928955, 'learning_rate': 1.7207459207459208e-05, 'epoch': 0.42}                
+{'loss': 1.0568, 'grad_norm': 2.1024436950683594, 'learning_rate': 1.6974358974358977e-05, 'epoch': 0.45}                
+{'loss': 1.0742, 'grad_norm': 3.4997057914733887, 'learning_rate': 1.6741258741258743e-05, 'epoch': 0.49}                
+{'loss': 1.0624, 'grad_norm': 2.9000742435455322, 'learning_rate': 1.6508158508158508e-05, 'epoch': 0.52}                
+{'loss': 1.0613, 'grad_norm': 2.2396743297576904, 'learning_rate': 1.6275058275058274e-05, 'epoch': 0.56}                
+{'loss': 1.0482, 'grad_norm': 3.916114091873169, 'learning_rate': 1.6041958041958043e-05, 'epoch': 0.59}                 
+{'loss': 1.0493, 'grad_norm': 2.597829580307007, 'learning_rate': 1.580885780885781e-05, 'epoch': 0.63}                  
+{'loss': 1.04, 'grad_norm': 2.7452287673950195, 'learning_rate': 1.5575757575757578e-05, 'epoch': 0.66}                  
+{'loss': 1.0473, 'grad_norm': 3.090202569961548, 'learning_rate': 1.5342657342657343e-05, 'epoch': 0.7}                  
+{'loss': 1.0714, 'grad_norm': 6.371187686920166, 'learning_rate': 1.510955710955711e-05, 'epoch': 0.73}                  
+{'loss': 1.0356, 'grad_norm': 4.10597038269043, 'learning_rate': 1.4876456876456876e-05, 'epoch': 0.77}                  
+{'loss': 1.0438, 'grad_norm': 3.017493486404419, 'learning_rate': 1.4643356643356646e-05, 'epoch': 0.8}                  
+{'loss': 1.0298, 'grad_norm': 3.7545807361602783, 'learning_rate': 1.4410256410256411e-05, 'epoch': 0.84}                
+{'loss': 1.0493, 'grad_norm': 4.722078800201416, 'learning_rate': 1.4177156177156179e-05, 'epoch': 0.87}                 
+{'loss': 1.0478, 'grad_norm': 3.638932228088379, 'learning_rate': 1.3944055944055946e-05, 'epoch': 0.91}                 
+{'loss': 1.051, 'grad_norm': 2.861070156097412, 'learning_rate': 1.3710955710955712e-05, 'epoch': 0.94}                  
+{'loss': 1.0344, 'grad_norm': 3.524460792541504, 'learning_rate': 1.3477855477855479e-05, 'epoch': 0.98}                 
+{'eval_loss': 1.0347405672073364, 'eval_accuracy': 0.4641483036026583, 'eval_f1_macro': 0.3412096117978471, 'eval_f1_weighted': 0.4066969948582195, 'eval_runtime': 24.3959, 'eval_samples_per_second': 117.192, 'eval_steps_per_second': 29.308, 'epoch': 1.0}
+{'loss': 1.0292, 'grad_norm': 4.759646892547607, 'learning_rate': 1.3244755244755245e-05, 'epoch': 1.01}                 
+{'loss': 1.0132, 'grad_norm': 4.34641695022583, 'learning_rate': 1.3011655011655014e-05, 'epoch': 1.05}                  
+{'loss': 1.0259, 'grad_norm': 17.129032135009766, 'learning_rate': 1.277855477855478e-05, 'epoch': 1.08}                 
+{'loss': 1.0241, 'grad_norm': 3.8314311504364014, 'learning_rate': 1.2545454545454547e-05, 'epoch': 1.12}                
+{'loss': 1.004, 'grad_norm': 6.278507232666016, 'learning_rate': 1.2312354312354313e-05, 'epoch': 1.15}                  
+{'loss': 1.0104, 'grad_norm': 6.8132219314575195, 'learning_rate': 1.2079254079254082e-05, 'epoch': 1.19}                
+{'loss': 1.0274, 'grad_norm': 6.585583686828613, 'learning_rate': 1.1846153846153847e-05, 'epoch': 1.22}                 
+{'loss': 1.0437, 'grad_norm': 3.925600290298462, 'learning_rate': 1.1613053613053613e-05, 'epoch': 1.26}                 
+{'loss': 1.015, 'grad_norm': 7.21788215637207, 'learning_rate': 1.1379953379953382e-05, 'epoch': 1.29}                   
+{'loss': 1.007, 'grad_norm': 5.802639961242676, 'learning_rate': 1.1146853146853148e-05, 'epoch': 1.33}                  
+{'loss': 1.01, 'grad_norm': 5.070983409881592, 'learning_rate': 1.0913752913752915e-05, 'epoch': 1.36}                   
+{'loss': 1.0094, 'grad_norm': 10.438255310058594, 'learning_rate': 1.068065268065268e-05, 'epoch': 1.4}                  
+{'loss': 0.9814, 'grad_norm': 5.515920639038086, 'learning_rate': 1.044755244755245e-05, 'epoch': 1.43}                  
+{'loss': 1.0084, 'grad_norm': 6.333302021026611, 'learning_rate': 1.0214452214452216e-05, 'epoch': 1.47}                 
+{'loss': 1.0273, 'grad_norm': 7.72424840927124, 'learning_rate': 9.981351981351983e-06, 'epoch': 1.5}                    
+{'loss': 1.0202, 'grad_norm': 5.75954532623291, 'learning_rate': 9.748251748251749e-06, 'epoch': 1.54}                   
+{'loss': 0.9885, 'grad_norm': 6.898824691772461, 'learning_rate': 9.515151515151516e-06, 'epoch': 1.57}                  
+{'loss': 0.9989, 'grad_norm': 8.357126235961914, 'learning_rate': 9.282051282051283e-06, 'epoch': 1.61}                  
+{'loss': 1.001, 'grad_norm': 8.639812469482422, 'learning_rate': 9.04895104895105e-06, 'epoch': 1.64}                    
+{'loss': 0.9761, 'grad_norm': 3.3474786281585693, 'learning_rate': 8.815850815850816e-06, 'epoch': 1.68}                 
+{'loss': 1.0067, 'grad_norm': 7.858705520629883, 'learning_rate': 8.582750582750584e-06, 'epoch': 1.71}                  
+{'loss': 0.9944, 'grad_norm': 6.72666072845459, 'learning_rate': 8.34965034965035e-06, 'epoch': 1.75}                    
+{'loss': 0.9752, 'grad_norm': 7.022733688354492, 'learning_rate': 8.116550116550117e-06, 'epoch': 1.78}                  
+{'loss': 0.9957, 'grad_norm': 8.340938568115234, 'learning_rate': 7.883449883449884e-06, 'epoch': 1.82}                  
+{'loss': 0.9933, 'grad_norm': 4.040565490722656, 'learning_rate': 7.650349650349652e-06, 'epoch': 1.85}                  
+{'loss': 1.0108, 'grad_norm': 5.573667049407959, 'learning_rate': 7.417249417249418e-06, 'epoch': 1.89}                  
+{'loss': 1.0019, 'grad_norm': 4.175135135650635, 'learning_rate': 7.1841491841491854e-06, 'epoch': 1.92}                 
+{'loss': 1.0256, 'grad_norm': 7.698734760284424, 'learning_rate': 6.951048951048952e-06, 'epoch': 1.96}                  
+{'loss': 0.9923, 'grad_norm': 5.5924482345581055, 'learning_rate': 6.717948717948718e-06, 'epoch': 1.99}                 
+{'eval_loss': 1.0041327476501465, 'eval_accuracy': 0.4812871633438265, 'eval_f1_macro': 0.3576215983193265, 'eval_f1_weighted': 0.4259268277412657, 'eval_runtime': 13.5859, 'eval_samples_per_second': 210.439, 'eval_steps_per_second': 52.628, 'epoch': 2.0}
+{'loss': 0.9586, 'grad_norm': 7.797219276428223, 'learning_rate': 6.484848484848485e-06, 'epoch': 2.03}                  
+{'loss': 0.9525, 'grad_norm': 5.738112449645996, 'learning_rate': 6.2517482517482516e-06, 'epoch': 2.06}                 
+{'loss': 0.9976, 'grad_norm': 7.146631717681885, 'learning_rate': 6.018648018648019e-06, 'epoch': 2.1}                   
+{'loss': 0.9463, 'grad_norm': 7.5744452476501465, 'learning_rate': 5.785547785547786e-06, 'epoch': 2.13}                 
+{'loss': 0.948, 'grad_norm': 5.62247371673584, 'learning_rate': 5.552447552447553e-06, 'epoch': 2.17}                    
+{'loss': 0.9348, 'grad_norm': 17.108928680419922, 'learning_rate': 5.31934731934732e-06, 'epoch': 2.2}                   
+{'loss': 0.9353, 'grad_norm': 12.159097671508789, 'learning_rate': 5.086247086247087e-06, 'epoch': 2.24}                 
+{'loss': 0.9237, 'grad_norm': 10.845916748046875, 'learning_rate': 4.853146853146853e-06, 'epoch': 2.27}                 
+{'loss': 0.9283, 'grad_norm': 13.046788215637207, 'learning_rate': 4.620046620046621e-06, 'epoch': 2.31}                 
+{'loss': 0.9364, 'grad_norm': 7.283789157867432, 'learning_rate': 4.386946386946387e-06, 'epoch': 2.34}                  
+{'loss': 0.9407, 'grad_norm': 9.803580284118652, 'learning_rate': 4.1538461538461545e-06, 'epoch': 2.38}                 
+{'loss': 0.9392, 'grad_norm': 8.175699234008789, 'learning_rate': 3.920745920745921e-06, 'epoch': 2.41}                  
+{'loss': 0.9535, 'grad_norm': 7.791671276092529, 'learning_rate': 3.687645687645688e-06, 'epoch': 2.45}                  
+{'loss': 0.9242, 'grad_norm': 21.307544708251953, 'learning_rate': 3.454545454545455e-06, 'epoch': 2.48}                 
+{'loss': 0.9326, 'grad_norm': 9.417428970336914, 'learning_rate': 3.221445221445222e-06, 'epoch': 2.52}                  
+{'loss': 0.9295, 'grad_norm': 10.212149620056152, 'learning_rate': 2.9883449883449884e-06, 'epoch': 2.55}                
+{'loss': 0.9394, 'grad_norm': 8.752070426940918, 'learning_rate': 2.7552447552447554e-06, 'epoch': 2.59}                 
+{'loss': 0.9446, 'grad_norm': 11.59738826751709, 'learning_rate': 2.5221445221445223e-06, 'epoch': 2.62}                 
+{'loss': 0.909, 'grad_norm': 7.435070037841797, 'learning_rate': 2.2890442890442893e-06, 'epoch': 2.66}                  
+{'loss': 0.9454, 'grad_norm': 14.135787963867188, 'learning_rate': 2.0559440559440562e-06, 'epoch': 2.69}                
+{'loss': 0.9498, 'grad_norm': 10.270681381225586, 'learning_rate': 1.822843822843823e-06, 'epoch': 2.73}                 
+{'loss': 0.9454, 'grad_norm': 13.259895324707031, 'learning_rate': 1.5897435897435897e-06, 'epoch': 2.76}                
+{'loss': 0.9312, 'grad_norm': 15.971948623657227, 'learning_rate': 1.3566433566433567e-06, 'epoch': 2.8}                 
+{'loss': 0.9315, 'grad_norm': 7.678092956542969, 'learning_rate': 1.1235431235431236e-06, 'epoch': 2.83}                 
+{'loss': 0.9233, 'grad_norm': 8.6402587890625, 'learning_rate': 8.904428904428905e-07, 'epoch': 2.87}                    
+{'loss': 0.9557, 'grad_norm': 12.686997413635254, 'learning_rate': 6.573426573426573e-07, 'epoch': 2.9}                  
+{'loss': 0.9218, 'grad_norm': 11.800577163696289, 'learning_rate': 4.242424242424243e-07, 'epoch': 2.94}                 
+{'loss': 0.9289, 'grad_norm': 11.20620346069336, 'learning_rate': 1.9114219114219117e-07, 'epoch': 2.97}                 
+{'eval_loss': 0.9851580858230591, 'eval_accuracy': 0.5075201119272473, 'eval_f1_macro': 0.4535427848013329, 'eval_f1_weighted': 0.49029996203916126, 'eval_runtime': 8.1788, 'eval_samples_per_second': 349.562, 'eval_steps_per_second': 87.421, 'epoch': 3.0}
+{'train_runtime': 2563.5847, 'train_samples_per_second': 26.762, 'train_steps_per_second': 1.673, 'train_loss': 1.001359496750198, 'epoch': 3.0}                                                                                                   
+100%|████████████████████████████████████████████████████████████████████████████████| 4290/4290 [42:43<00:00,  1.67it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████| 715/715 [00:15<00:00, 47.07it/s]
+
+Held-out test results:
+              precision    recall  f1-score   support
+
+        high       0.60      0.59      0.60      1118
+         low       0.40      0.16      0.23       589
+      medium       0.47      0.61      0.53      1152
+
+    accuracy                           0.51      2859
+   macro avg       0.49      0.46      0.45      2859
+weighted avg       0.50      0.51      0.49      2859
+
+
+Saved model to: S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot\artifacts\priority

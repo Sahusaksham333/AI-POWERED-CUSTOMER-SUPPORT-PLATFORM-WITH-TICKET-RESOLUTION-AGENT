@@ -1,0 +1,72 @@
+{
+  "report_title": "Recorded held-out test metrics",
+  "source": "User-provided training logs: train.txt, train1.txt, train2.txt, train3.txt, and train4.txt",
+  "test_samples": 2859,
+  "note": "These scores are transcribed from the provided logs; they are historical evaluation results, not a live benchmark. Artifact availability is checked independently.",
+  "models": [
+    {
+      "key": "queue",
+      "name": "Queue classification",
+      "architecture": "XLM-RoBERTa-base",
+      "target": "queue",
+      "primary_metric": "accuracy",
+      "accuracy": 0.48,
+      "macro_f1": 0.37,
+      "weighted_f1": 0.46,
+      "support": 2859,
+      "source_log": "train.txt",
+      "assessment": "Needs improvement: substantial class imbalance and low macro-F1. Treat predictions as triage suggestions and keep human review enabled."
+    },
+    {
+      "key": "priority",
+      "name": "Priority classification",
+      "architecture": "XLM-RoBERTa-base",
+      "target": "priority",
+      "primary_metric": "accuracy",
+      "accuracy": 0.51,
+      "macro_f1": 0.45,
+      "weighted_f1": 0.49,
+      "support": 2859,
+      "source_log": "train1.txt",
+      "assessment": "Needs improvement: low-class recall was weak in the supplied report. Do not use this score as a calibrated operational risk measure."
+    },
+    {
+      "key": "type",
+      "name": "Ticket-type classification",
+      "architecture": "XLM-RoBERTa-base",
+      "target": "type",
+      "primary_metric": "accuracy",
+      "accuracy": 0.85,
+      "macro_f1": 0.85,
+      "weighted_f1": 0.84,
+      "support": 2859,
+      "source_log": "train2.txt",
+      "assessment": "The strongest reported single-label classifier. Continue to monitor per-class performance and review uncertain predictions."
+    },
+    {
+      "key": "tags",
+      "name": "Multi-label ticket tagging",
+      "architecture": "XLM-RoBERTa-base",
+      "target": "tags",
+      "primary_metric": "top3_hit_rate",
+      "top3_hit_rate": 0.9898,
+      "top3_overlap_ratio": 0.6284,
+      "support": 2859,
+      "source_log": "train3.txt",
+      "assessment": "Top-3 hit rate means at least one relevant tag was found under the supplied metric; it does not mean 98.98% of every predicted tag is correct. The overlap ratio is 62.84%."
+    },
+    {
+      "key": "textcnn_queue",
+      "name": "TextCNN queue benchmark",
+      "architecture": "TextCNN",
+      "target": "queue",
+      "primary_metric": "accuracy",
+      "accuracy": 0.46,
+      "macro_f1": 0.37,
+      "weighted_f1": 0.43,
+      "support": 2859,
+      "source_log": "train4.txt",
+      "assessment": "Useful lightweight baseline, but the reported class-level recall is uneven. It did not outperform the reported XLM-RoBERTa queue model on accuracy."
+    }
+  ]
+}

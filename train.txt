@@ -1,0 +1,770 @@
+(base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> py -3.11 -m venv .venv   
+No suitable Python runtime found
+Pass --list (-0) to see all detected environments on your machine
+or set environment variable PYLAUNCHER_ALLOW_INSTALL to use winget
+or open the Microsoft Store to the requested version.
+(base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> py --list                                   
+ -V:3.14 *        Python 3.14 (64-bit)
+ -V:3.13          Python 3.13 (64-bit)
+ -V:3.12          Python 3.12 (64-bit)
+ -V:3.10          Python 3.10 (64-bit)
+(base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> py --list
+ -V:3.14 *        Python 3.14 (64-bit)
+ -V:3.13          Python 3.13 (64-bit)
+ -V:3.12          Python 3.12 (64-bit)
+ -V:3.11          Python 3.11 (64-bit)
+ -V:3.10          Python 3.10 (64-bit)
+(base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> py -3.11 -m venv .venv
+(base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> .\.venv\Scripts\Activate.ps1   
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> python -m pip install --upgrade pip setuptools wheel
+Requirement already satisfied: pip in s:\a projects\ai-powered customer support platform with ticket resolution agent\.venv\lib\site-packages (22.3)
+Collecting pip
+  Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 3.7 MB/s eta 0:00:00
+Requirement already satisfied: setuptools in s:\a projects\ai-powered customer support platform with ticket resolution agent\.venv\lib\site-packages (65.5.0)
+Collecting setuptools
+  Downloading setuptools-84.0.0-py3-none-any.whl (818 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 8.7 MB/s eta 0:00:00
+Collecting wheel
+  Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+Collecting packaging>=24.0
+  Downloading packaging-26.3-py3-none-any.whl (129 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 1.5 MB/s eta 0:00:00
+Installing collected packages: setuptools, pip, packaging, wheel
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 65.5.0
+    Uninstalling setuptools-65.5.0:
+      Successfully uninstalled setuptools-65.5.0
+  Attempting uninstall: pip
+    Found existing installation: pip 22.3
+    Uninstalling pip-22.3:
+      Successfully uninstalled pip-22.3
+Successfully installed packaging-26.3 pip-26.2.1 setuptools-84.0.0 wheel-0.48.0
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> ^C
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> ^C
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
+Looking in indexes: https://download.pytorch.org/whl/cu130
+Collecting torch
+  Downloading torch-2.14.1%2Bcu130-cp311-cp311-win_amd64.whl.metadata (37 kB)
+Collecting torchvision
+  Downloading torchvision-0.29.1%2Bcu130-cp311-cp311-win_amd64.whl.metadata (5.8 kB)
+Collecting torchaudio
+  Downloading torchaudio-2.11.0%2Bcu130-cp311-cp311-win_amd64.whl.metadata (7.0 kB)
+Collecting filelock (from torch)
+  Downloading filelock-3.32.3-py3-none-any.whl.metadata (2.0 kB)
+Collecting typing-extensions>=4.10.0 (from torch)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: setuptools>=77.0.3 in .\.venv\Lib\site-packages (from torch) (84.0.0)
+Collecting sympy>=1.13.3 (from torch)
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch)
+  Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting jinja2 (from torch)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec>=0.8.5 (from torch)
+  Downloading fsspec-2026.7.0-py3-none-any.whl.metadata (10 kB)
+Collecting numpy (from torchvision)
+  Using cached numpy-2.4.6-cp311-cp311-win_amd64.whl.metadata (6.6 kB)
+Collecting pillow!=8.3.*,>=5.3.0 (from torchvision)
+  Using cached pillow-12.3.0-cp311-cp311-win_amd64.whl.metadata (9.3 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch)
+  Downloading markupsafe-3.0.3-cp311-cp311-win_amd64.whl.metadata (2.8 kB)
+Downloading torch-2.14.1%2Bcu130-cp311-cp311-win_amd64.whl (1990.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 GB 23.5 MB/s  0:01:10
+Downloading torchvision-0.29.1%2Bcu130-cp311-cp311-win_amd64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 6.4 MB/s  0:00:01
+Downloading torchaudio-2.11.0%2Bcu130-cp311-cp311-win_amd64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 3.7 MB/s  0:00:00
+Downloading fsspec-2026.7.0-py3-none-any.whl (206 kB)
+Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 3.9 MB/s  0:00:00
+Using cached pillow-12.3.0-cp311-cp311-win_amd64.whl (7.2 MB)
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading filelock-3.32.3-py3-none-any.whl (98 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp311-cp311-win_amd64.whl (15 kB)
+Using cached numpy-2.4.6-cp311-cp311-win_amd64.whl (12.6 MB)
+Installing collected packages: torchaudio, mpmath, typing-extensions, sympy, pillow, numpy, networkx, MarkupSafe, fsspec, filelock, jinja2, torch, torchvision
+Successfully installed MarkupSafe-3.0.3 filelock-3.32.3 fsspec-2026.7.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.6 pillow-12.3.0 sympy-1.14.0 torch-2.14.1+cu130 torchaudio-2.11.0+cu130 torchvision-0.29.1+cu130 typing-extensions-4.16.0
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> nvidia-smi
+Wed Oct 14 20:31:59 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 617.42                 KMD Version: 617.42        CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4060 ...  WDDM  |   00000000:01:00.0  On |                  N/A |
+| N/A   56C    P8              3W /  135W |    1007MiB /   8188MiB |      4%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            5852    C+G   ...1g1gvanyjgm\WhatsApp.Root.exe      N/A      |
+|    0   N/A  N/A            7344    C+G   ...yb3d8bbwe\WindowsTerminal.exe      N/A      |
+|    0   N/A  N/A            8528    C+G   ...App_cw5n1h2txyewy\LockApp.exe      N/A      |
+|    0   N/A  N/A           11560    C+G   C:\Windows\explorer.exe               N/A      |
+|    0   N/A  N/A           13088    C+G   ...2txyewy\CrossDeviceResume.exe      N/A      |
+|    0   N/A  N/A           13548    C+G   ...enCommandCenterBackground.exe      N/A      |
+|    0   N/A  N/A           13836    C+G   ..._cw5n1h2txyewy\SearchHost.exe      N/A      |
+|    0   N/A  N/A           13864    C+G   ...y\StartMenuExperienceHost.exe      N/A      |
+|    0   N/A  N/A           14352    C+G   ....0.4283.45\msedgewebview2.exe      N/A      |
+|    0   N/A  N/A           15612    C+G   ....0.4283.45\msedgewebview2.exe      N/A      |
+|    0   N/A  N/A           17252    C+G   ...Chrome\Application\chrome.exe      N/A      |
+|    0   N/A  N/A           18028    C+G   ...ui\LightStudio-background.exe      N/A      |
+|    0   N/A  N/A           18764    C+G   ...5n1h2txyewy\TextInputHost.exe      N/A      |
+|    0   N/A  N/A           19840    C+G   ...8bbwe\PhoneExperienceHost.exe      N/A      |
+|    0   N/A  N/A           20432    C+G   ...ms\Microsoft VS Code\Code.exe      N/A      |
+|    0   N/A  N/A           21700    C+G   ...r\frontend\Docker Desktop.exe      N/A      |
+|    0   N/A  N/A           25396    C+G   ...r\app-2.1.2\Flow.Launcher.exe      N/A      |
+|    0   N/A  N/A           27148    C+G   ...Chrome\Application\chrome.exe      N/A      |
+|    0   N/A  N/A           30132    C+G   ...indows\System32\ShellHost.exe      N/A      |
+|    0   N/A  N/A           30972    C+G   ...4__t4vj0pshhgkwm\Telegram.exe      N/A      |
++-----------------------------------------------------------------------------------------+
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> python -c "import torch; print(torch.__version__); print('CUDA:', torch.cuda.is_available()); print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU only')"
+2.14.1+cu130
+CUDA: True
+NVIDIA GeForce RTX 4060 Laptop GPU
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> python scripts/check_environment.py                                                                                                              
+C:\Users\Saksham Sahu\AppData\Local\Programs\Python\Python311\python.exe: can't open file 'S:\\A Projects\\AI-Powered Customer Support Platform with Ticket Resolution Agent\\scripts\\check_environment.py': [Errno 2] No such file or directory
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent> cd "S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot"
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> python scripts/check_environment.py                                                                           
+Traceback (most recent call last):
+  File "S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot\scripts\check_environment.py", line 6, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> python -m pip install -r requirements.txt
+Requirement already satisfied: numpy<3,>=1.26 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from -r requirements.txt (line 7)) (2.4.6)
+Collecting pandas<3,>=2.1 (from -r requirements.txt (line 8))
+  Downloading pandas-2.3.3-cp311-cp311-win_amd64.whl.metadata (19 kB)
+Collecting scikit-learn<2,>=1.4 (from -r requirements.txt (line 9))
+  Downloading scikit_learn-1.9.1-cp311-cp311-win_amd64.whl.metadata (9.3 kB)
+Collecting scipy<2,>=1.11 (from -r requirements.txt (line 10))
+  Downloading scipy-1.17.1-cp311-cp311-win_amd64.whl.metadata (60 kB)
+Collecting joblib>=1.3 (from -r requirements.txt (line 11))
+  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting matplotlib>=3.8 (from -r requirements.txt (line 12))
+  Downloading matplotlib-3.11.2-cp311-cp311-win_amd64.whl.metadata (80 kB)
+Collecting seaborn>=0.13 (from -r requirements.txt (line 13))
+  Using cached seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting transformers<5,>=4.50 (from -r requirements.txt (line 16))
+  Downloading transformers-4.57.6-py3-none-any.whl.metadata (43 kB)
+Collecting datasets<5,>=3.2 (from -r requirements.txt (line 17))
+  Downloading datasets-4.8.5-py3-none-any.whl.metadata (19 kB)
+Collecting accelerate>=1.2 (from -r requirements.txt (line 18))
+  Downloading accelerate-1.15.0-py3-none-any.whl.metadata (19 kB)
+Collecting evaluate>=0.4 (from -r requirements.txt (line 19))
+  Downloading evaluate-0.4.6-py3-none-any.whl.metadata (9.5 kB)
+Collecting sentencepiece>=0.2 (from -r requirements.txt (line 20))
+  Downloading sentencepiece-0.2.2-cp311-cp311-win_amd64.whl.metadata (34 kB)
+Collecting tokenizers>=0.21 (from -r requirements.txt (line 21))
+  Using cached tokenizers-0.23.3-cp310-abi3-win_amd64.whl.metadata (10 kB)
+Collecting safetensors>=0.4 (from -r requirements.txt (line 22))
+  Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl.metadata (4.2 kB)
+Collecting sentence-transformers>=3.3 (from -r requirements.txt (line 25))
+  Downloading sentence_transformers-6.1.0-py3-none-any.whl.metadata (20 kB)
+Collecting chromadb<2,>=0.6 (from -r requirements.txt (line 26))
+  Using cached chromadb-1.5.9-cp39-abi3-win_amd64.whl.metadata (5.1 kB)
+Collecting fastapi>=0.115 (from -r requirements.txt (line 29))
+  Downloading fastapi-0.143.1-py3-none-any.whl.metadata (26 kB)
+Collecting uvicorn>=0.34 (from uvicorn[standard]>=0.34->-r requirements.txt (line 30))
+  Using cached uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting streamlit>=1.42 (from -r requirements.txt (line 31))
+  Using cached streamlit-1.65.0-py3-none-any.whl.metadata (10 kB)
+Collecting python-multipart>=0.0.20 (from -r requirements.txt (line 32))
+  Using cached python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+Collecting pydantic>=2.10 (from -r requirements.txt (line 33))
+  Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+Collecting pydantic-settings>=2.7 (from -r requirements.txt (line 34))
+  Downloading pydantic_settings-2.16.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting requests>=2.32 (from -r requirements.txt (line 35))
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting httpx>=0.28 (from -r requirements.txt (line 36))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting sqlalchemy>=2.0 (from -r requirements.txt (line 39))
+  Using cached sqlalchemy-2.1.4-cp311-cp311-win_amd64.whl.metadata (9.9 kB)
+Collecting python-dotenv>=1.0 (from -r requirements.txt (line 40))
+  Using cached python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Collecting pypdf>=5.1 (from -r requirements.txt (line 41))
+  Downloading pypdf-6.20.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting python-docx>=1.1 (from -r requirements.txt (line 42))
+  Using cached python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting openpyxl>=3.1 (from -r requirements.txt (line 43))
+  Using cached openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: Pillow>=11 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from -r requirements.txt (line 44)) (12.3.0)
+Collecting langchain>=0.3 (from -r requirements.txt (line 47))
+  Downloading langchain-1.4.5-py3-none-any.whl.metadata (6.2 kB)
+Collecting langchain-core>=0.3 (from -r requirements.txt (line 48))
+  Downloading langchain_core-1.6.10-py3-none-any.whl.metadata (4.8 kB)
+Collecting langchain-ollama>=0.2 (from -r requirements.txt (line 49))
+  Using cached langchain_ollama-1.1.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting langgraph>=0.2 (from -r requirements.txt (line 50))
+  Downloading langgraph-1.2.15-py3-none-any.whl.metadata (4.9 kB)
+Collecting pytest>=8.3 (from -r requirements.txt (line 53))
+  Using cached pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting ruff>=0.9 (from -r requirements.txt (line 54))
+  Downloading ruff-0.17.0-py3-none-win_amd64.whl.metadata (21 kB)
+Collecting python-dateutil>=2.8.2 (from pandas<3,>=2.1->-r requirements.txt (line 8))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas<3,>=2.1->-r requirements.txt (line 8))
+  Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas<3,>=2.1->-r requirements.txt (line 8))
+  Using cached tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting narwhals>=2.0.1 (from scikit-learn<2,>=1.4->-r requirements.txt (line 9))
+  Using cached narwhals-2.27.1-py3-none-any.whl.metadata (15 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit-learn<2,>=1.4->-r requirements.txt (line 9))
+  Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+Requirement already satisfied: filelock in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from transformers<5,>=4.50->-r requirements.txt (line 16)) (3.32.3)
+Collecting huggingface-hub<1.0,>=0.34.0 (from transformers<5,>=4.50->-r requirements.txt (line 16))
+  Downloading huggingface_hub-0.36.2-py3-none-any.whl.metadata (15 kB)
+Requirement already satisfied: packaging>=20.0 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from transformers<5,>=4.50->-r requirements.txt (line 16)) (26.3)
+Collecting pyyaml>=5.1 (from transformers<5,>=4.50->-r requirements.txt (line 16))
+  Using cached pyyaml-6.0.3-cp311-cp311-win_amd64.whl.metadata (2.4 kB)
+Collecting regex!=2019.12.17 (from transformers<5,>=4.50->-r requirements.txt (line 16))
+  Downloading regex-2026.9.29-cp311-cp311-win_amd64.whl.metadata (41 kB)
+Collecting tokenizers>=0.21 (from -r requirements.txt (line 21))
+  Using cached tokenizers-0.22.2-cp39-abi3-win_amd64.whl.metadata (7.4 kB)
+Collecting tqdm>=4.27 (from transformers<5,>=4.50->-r requirements.txt (line 16))
+  Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting pyarrow>=21.0.0 (from datasets<5,>=3.2->-r requirements.txt (line 17))
+  Downloading pyarrow-26.0.0-cp311-cp311-win_amd64.whl.metadata (3.0 kB)
+Collecting dill<0.4.2,>=0.3.0 (from datasets<5,>=3.2->-r requirements.txt (line 17))
+  Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting xxhash (from datasets<5,>=3.2->-r requirements.txt (line 17))
+  Using cached xxhash-4.0.1-cp311-cp311-win_amd64.whl.metadata (18 kB)
+Collecting multiprocess<0.70.20 (from datasets<5,>=3.2->-r requirements.txt (line 17))
+  Downloading multiprocess-0.70.19-py311-none-any.whl.metadata (7.5 kB)
+Collecting fsspec<=2026.2.0,>=2023.1.0 (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3.2->-r requirements.txt (line 17))
+  Using cached fsspec-2026.2.0-py3-none-any.whl.metadata (10 kB)
+Collecting build>=1.0.3 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting pybase64>=1.4.1 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Downloading pybase64-1.5.1-cp311-cp311-win_amd64.whl.metadata (11 kB)
+Requirement already satisfied: typing-extensions>=4.5.0 in S:\A Projects\AI-Powered Customer Support Platform with TicketResolution Agent\.venv\Lib\site-packages (from chromadb<2,>=0.6->-r requirements.txt (line 26)) (4.16.0)
+Collecting onnxruntime>=1.14.1 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Downloading onnxruntime-1.31.0-cp311-cp311-win_amd64.whl.metadata (6.0 kB)
+Collecting opentelemetry-api>=1.2.0 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting opentelemetry-exporter-otlp-proto-grpc>=1.2.0 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached opentelemetry_exporter_otlp_proto_grpc-1.45.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting opentelemetry-sdk>=1.2.0 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached opentelemetry_sdk-1.45.1-py3-none-any.whl.metadata (1.6 kB)
+Collecting pypika>=0.48.9 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached pypika-0.51.1-py2.py3-none-any.whl.metadata (51 kB)
+Collecting overrides>=7.3.1 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting importlib-resources (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached importlib_resources-7.1.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting grpcio>=1.58.0 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Downloading grpcio-1.84.0-cp311-cp311-win_amd64.whl.metadata (3.9 kB)
+Collecting bcrypt>=4.0.1 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached bcrypt-5.0.0-cp39-abi3-win_amd64.whl.metadata (10 kB)
+Collecting typer>=0.9.0 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached typer-0.27.3-py3-none-any.whl.metadata (16 kB)
+Collecting kubernetes>=28.1.0 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached kubernetes-37.0.1-py2.py3-none-any.whl.metadata (1.9 kB)
+Collecting tenacity>=8.2.3 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached tenacity-9.2.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting mmh3>=4.0.1 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Downloading mmh3-5.3.1-cp311-cp311-win_amd64.whl.metadata (14 kB)
+Collecting orjson>=3.9.12 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached orjson-3.13.0-cp311-cp311-win_amd64.whl.metadata (43 kB)
+Collecting rich>=10.11.0 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting jsonschema>=4.19.0 (from chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting anyio (from httpx>=0.28->-r requirements.txt (line 36))
+  Using cached anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting certifi (from httpx>=0.28->-r requirements.txt (line 36))
+  Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx>=0.28->-r requirements.txt (line 36))
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx>=0.28->-r requirements.txt (line 36))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3.2->-r requirements.txt (line 17))
+  Downloading aiohttp-3.14.5-cp311-cp311-win_amd64.whl.metadata (8.5 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.28->-r requirements.txt (line 36))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting cloudpickle>=3.0 (from joblib>=1.3->-r requirements.txt (line 11))
+  Using cached cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.8->-r requirements.txt (line 12))
+  Downloading contourpy-1.3.3-cp311-cp311-win_amd64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.8->-r requirements.txt (line 12))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.28.2 (from matplotlib>=3.8->-r requirements.txt (line 12))
+  Downloading fonttools-4.67.0-cp311-cp311-win_amd64.whl.metadata (139 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.8->-r requirements.txt (line 12))
+  Downloading kiwisolver-1.5.1-cp311-cp311-win_amd64.whl.metadata (5.2 kB)
+Collecting pyparsing>=3 (from matplotlib>=3.8->-r requirements.txt (line 12))
+  Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting psutil (from accelerate>=1.2->-r requirements.txt (line 18))
+  Using cached psutil-7.2.2-cp37-abi3-win_amd64.whl.metadata (22 kB)
+Requirement already satisfied: torch>=2.0.0 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from accelerate>=1.2->-r requirements.txt (line 18)) (2.14.1+cu130)
+INFO: pip is looking at multiple versions of sentence-transformers to determine which version is compatible with other requirements. This could take a while.
+Collecting sentence-transformers>=3.3 (from -r requirements.txt (line 25))
+  Downloading sentence_transformers-6.0.1-py3-none-any.whl.metadata (20 kB)
+  Downloading sentence_transformers-6.0.0-py3-none-any.whl.metadata (20 kB)
+  Downloading sentence_transformers-5.7.0-py3-none-any.whl.metadata (18 kB)
+Collecting starlette>=0.46.0 (from fastapi>=0.115->-r requirements.txt (line 29))
+  Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting typing-inspection>=0.4.2 (from fastapi>=0.115->-r requirements.txt (line 29))
+  Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi>=0.115->-r requirements.txt (line 29))
+  Using cached annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+Collecting click>=7.0 (from uvicorn>=0.34->uvicorn[standard]>=0.34->-r requirements.txt (line 30))
+  Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting altair!=5.4.0,!=5.4.1,<7,>=5.0.0 (from streamlit>=1.42->-r requirements.txt (line 31))
+  Using cached altair-6.3.0-py3-none-any.whl.metadata (11 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit>=1.42->-r requirements.txt (line 31))
+  Using cached pydeck-0.9.3-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting protobuf<8,>=5.26.1 (from streamlit>=1.42->-r requirements.txt (line 31))
+  Using cached protobuf-7.36.2-cp310-abi3-win_amd64.whl.metadata (595 bytes)
+Collecting pyarrow>=21.0.0 (from datasets<5,>=3.2->-r requirements.txt (line 17))
+  Using cached pyarrow-25.0.1-cp311-cp311-win_amd64.whl.metadata (3.0 kB)
+Collecting toml<2,>=0.10.1 (from streamlit>=1.42->-r requirements.txt (line 31))
+  Using cached toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting httptools<1,>=0.6.3 (from streamlit>=1.42->-r requirements.txt (line 31))
+  Downloading httptools-0.9.0-cp311-cp311-win_amd64.whl.metadata (3.7 kB)
+Collecting websockets<18,>=12.0.0 (from streamlit>=1.42->-r requirements.txt (line 31))
+  Using cached websockets-17.2-cp311-cp311-win_amd64.whl.metadata (6.5 kB)
+Collecting itsdangerous<3,>=2.1.2 (from streamlit>=1.42->-r requirements.txt (line 31))
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting watchdog<7,>=2.1.5 (from streamlit>=1.42->-r requirements.txt (line 31))
+  Using cached watchdog-6.0.0-py3-none-win_amd64.whl.metadata (44 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=2.32->-r requirements.txt (line 35))
+  Using cached charset_normalizer-3.5.2-cp311-cp311-win_amd64.whl.metadata (47 kB)
+Collecting urllib3<3,>=1.26 (from requests>=2.32->-r requirements.txt (line 35))
+  Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Requirement already satisfied: jinja2 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit>=1.42->-r requirements.txt (line 31)) (3.1.6)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.10->-r requirements.txt (line 33))
+  Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.1 (from pydantic>=2.10->-r requirements.txt (line 33))
+  Downloading pydantic_core-2.50.1-cp311-cp311-win_amd64.whl.metadata (6.7 kB)
+Collecting lxml>=3.1.0 (from python-docx>=1.1->-r requirements.txt (line 42))
+  Using cached lxml-6.1.3-cp311-cp311-win_amd64.whl.metadata (3.4 kB)
+Collecting et-xmlfile (from openpyxl>=3.1->-r requirements.txt (line 43))
+  Using cached et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting jsonpatch<2.0.0,>=1.33.0 (from langchain-core>=0.3->-r requirements.txt (line 48))
+  Downloading jsonpatch-1.35-py3-none-any.whl.metadata (3.7 kB)
+Collecting langchain-protocol>=0.0.17 (from langchain-core>=0.3->-r requirements.txt (line 48))
+  Using cached langchain_protocol-0.0.19-py3-none-any.whl.metadata (2.4 kB)
+Collecting langsmith<1.0.0,>=0.3.45 (from langchain-core>=0.3->-r requirements.txt (line 48))
+  Downloading langsmith-0.14.8-py3-none-any.whl.metadata (22 kB)
+Collecting uuid-utils<1.0,>=0.12.0 (from langchain-core>=0.3->-r requirements.txt (line 48))
+  Using cached uuid_utils-0.17.1-cp311-cp311-win_amd64.whl.metadata (6.5 kB)
+Collecting langgraph-checkpoint<5.0.0,>=4.3.0 (from langgraph>=0.2->-r requirements.txt (line 50))
+  Downloading langgraph_checkpoint-4.3.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting langgraph-prebuilt<1.2.0,>=1.1.0 (from langgraph>=0.2->-r requirements.txt (line 50))
+  Downloading langgraph_prebuilt-1.1.0-py3-none-any.whl.metadata (5.2 kB)
+Collecting langgraph-sdk<0.5.0,>=0.4.6 (from langgraph>=0.2->-r requirements.txt (line 50))
+  Downloading langgraph_sdk-0.4.7-py3-none-any.whl.metadata (5.1 kB)
+Collecting jsonpointer>=3.2 (from jsonpatch<2.0.0,>=1.33.0->langchain-core>=0.3->-r requirements.txt (line 48))
+  Downloading jsonpointer-3.2.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting ormsgpack>=1.12.0 (from langgraph-checkpoint<5.0.0,>=4.3.0->langgraph>=0.2->-r requirements.txt (line 50))
+  Downloading ormsgpack-1.12.2-cp311-cp311-win_amd64.whl.metadata (3.3 kB)
+Collecting websockets<18,>=12.0.0 (from streamlit>=1.42->-r requirements.txt (line 31))
+  Downloading websockets-16.1.1-cp311-cp311-win_amd64.whl.metadata (7.0 kB)
+Collecting distro>=1.7.0 (from langsmith<1.0.0,>=0.3.45->langchain-core>=0.3->-r requirements.txt (line 48))
+  Using cached distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting httpx2<3,>=2 (from langsmith<1.0.0,>=0.3.45->langchain-core>=0.3->-r requirements.txt (line 48))
+  Using cached httpx2-2.13.1-py3-none-any.whl.metadata (9.8 kB)
+Collecting requests-toolbelt>=1.0.0 (from langsmith<1.0.0,>=0.3.45->langchain-core>=0.3->-r requirements.txt (line 48))
+  Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting sniffio>=1.1 (from langsmith<1.0.0,>=0.3.45->langchain-core>=0.3->-r requirements.txt (line 48))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting zstandard>=0.23.0 (from langsmith<1.0.0,>=0.3.45->langchain-core>=0.3->-r requirements.txt (line 48))
+  Using cached zstandard-0.25.0-cp311-cp311-win_amd64.whl.metadata (3.3 kB)
+Collecting httpcore2==2.13.1 (from httpx2<3,>=2->langsmith<1.0.0,>=0.3.45->langchain-core>=0.3->-r requirements.txt (line48))
+  Using cached httpcore2-2.13.1-py3-none-any.whl.metadata (26 kB)
+Collecting truststore>=0.10 (from httpx2<3,>=2->langsmith<1.0.0,>=0.3.45->langchain-core>=0.3->-r requirements.txt (line 48))
+  Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+Collecting ollama<1.0.0,>=0.6.1 (from langchain-ollama>=0.2->-r requirements.txt (line 49))
+  Using cached ollama-0.6.3-py3-none-any.whl.metadata (7.6 kB)
+Collecting colorama>=0.4 (from pytest>=8.3->-r requirements.txt (line 53))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting iniconfig>=1.0.1 (from pytest>=8.3->-r requirements.txt (line 53))
+  Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting pluggy<2,>=1.5 (from pytest>=8.3->-r requirements.txt (line 53))
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest>=8.3->-r requirements.txt (line 53))
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3.2->-r requirements.txt (line 17))
+  Using cached aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3.2->-r requirements.txt (line 17))
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting attrs>=17.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3.2->-r requirements.txt (line 17))
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3.2->-r requirements.txt (line 17))
+  Using cached frozenlist-1.8.0-cp311-cp311-win_amd64.whl.metadata (21 kB)
+Collecting multidict<8.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3.2->-r requirements.txt (line 17))
+  Downloading multidict-7.1.0-cp311-cp311-win_amd64.whl.metadata (6.4 kB)
+Collecting propcache>=0.2.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3.2->-r requirements.txt (line 17))
+  Using cached propcache-0.5.4-cp311-cp311-win_amd64.whl.metadata (25 kB)
+Collecting yarl<2.0,>=1.25.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets<5,>=3.2->-r requirements.txt (line 17))
+  Using cached yarl-1.25.1-cp311-cp311-win_amd64.whl.metadata (115 kB)
+Collecting pyproject_hooks (from build>=1.0.3->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from jinja2->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit>=1.42->-r requirements.txt (line 31)) (3.0.3)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.19.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.19.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=4.19.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached rpds_py-2026.9.1-cp311-cp311-win_amd64.whl.metadata (4.2 kB)
+Collecting websocket-client!=0.40.0,!=0.41.*,!=0.42.*,>=0.32.0 (from kubernetes>=28.1.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Downloading websocket_client-1.9.2-py3-none-any.whl.metadata (8.3 kB)
+Collecting requests-oauthlib (from kubernetes>=28.1.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+Collecting durationpy>=0.11 (from kubernetes>=28.1.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached durationpy-0.11-py3-none-any.whl.metadata (474 bytes)
+Collecting aiohttp-retry>=2.9.1 (from kubernetes>=28.1.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Downloading aiohttp_retry-2.9.1-py3-none-any.whl.metadata (8.8 kB)
+Collecting flatbuffers (from onnxruntime>=1.14.1->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+Collecting googleapis-common-protos~=1.57 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Downloading googleapis_common_protos-1.75.5-py3-none-any.whl.metadata (8.5 kB)
+Collecting opentelemetry-exporter-otlp-common==0.66b1 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached opentelemetry_exporter_otlp_common-0.66b1-py3-none-any.whl.metadata (1.9 kB)
+Collecting opentelemetry-exporter-otlp-proto-common==1.45.1 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached opentelemetry_exporter_otlp_proto_common-1.45.1-py3-none-any.whl.metadata (1.8 kB)
+Collecting opentelemetry-proto==1.45.1 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached opentelemetry_proto-1.45.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-semantic-conventions==0.66b1 (from opentelemetry-sdk>=1.2.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl.metadata (2.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas<3,>=2.1->-r requirements.txt (line 8))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.11.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.11.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Requirement already satisfied: setuptools>=77.0.3 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from torch>=2.0.0->accelerate>=1.2->-r requirements.txt (line 18)) (84.0.0)
+Requirement already satisfied: sympy>=1.13.3 in S:\A Projects\AI-Powered Customer Support Platform with Ticket ResolutionAgent\.venv\Lib\site-packages (from torch>=2.0.0->accelerate>=1.2->-r requirements.txt (line 18)) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from torch>=2.0.0->accelerate>=1.2->-r requirements.txt (line 18)) (3.6.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from sympy>=1.13.3->torch>=2.0.0->accelerate>=1.2->-r requirements.txt (line 18)) (1.3.0)
+Collecting shellingham>=1.3.0 (from typer>=0.9.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting watchfiles>=0.20 (from uvicorn[standard]>=0.34->-r requirements.txt (line 30))
+  Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl.metadata (5.0 kB)
+Collecting oauthlib>=3.0.0 (from requests-oauthlib->kubernetes>=28.1.0->chromadb<2,>=0.6->-r requirements.txt (line 26))
+  Using cached oauthlib-4.0.0-py3-none-any.whl.metadata (8.6 kB)
+Downloading pandas-2.3.3-cp311-cp311-win_amd64.whl (11.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 7.0 MB/s  0:00:01
+Downloading scikit_learn-1.9.1-cp311-cp311-win_amd64.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 16.7 MB/s  0:00:00
+Downloading scipy-1.17.1-cp311-cp311-win_amd64.whl (36.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.6/36.6 MB 25.8 MB/s  0:00:01
+Downloading transformers-4.57.6-py3-none-any.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 26.8 MB/s  0:00:00
+Downloading datasets-4.8.5-py3-none-any.whl (528 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 529.0/529.0 kB 8.6 MB/s  0:00:00
+Using cached tokenizers-0.22.2-cp39-abi3-win_amd64.whl (2.7 MB)
+Using cached chromadb-1.5.9-cp39-abi3-win_amd64.whl (23.5 MB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+Using cached fsspec-2026.2.0-py3-none-any.whl (202 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading huggingface_hub-0.36.2-py3-none-any.whl (566 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 19.0 MB/s  0:00:00
+Downloading multiprocess-0.70.19-py311-none-any.whl (144 kB)
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Downloading matplotlib-3.11.2-cp311-cp311-win_amd64.whl (9.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 26.4 MB/s  0:00:00
+Using cached seaborn-0.13.2-py3-none-any.whl (294 kB)
+Downloading accelerate-1.15.0-py3-none-any.whl (394 kB)
+Downloading evaluate-0.4.6-py3-none-any.whl (84 kB)
+Downloading sentencepiece-0.2.2-cp311-cp311-win_amd64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 20.9 MB/s  0:00:00
+Downloading safetensors-0.8.0-cp310-abi3-win_amd64.whl (355 kB)
+Downloading sentence_transformers-5.7.0-py3-none-any.whl (611 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 611.3/611.3 kB 23.3 MB/s  0:00:00
+Downloading fastapi-0.143.1-py3-none-any.whl (144 kB)
+Using cached uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Using cached streamlit-1.65.0-py3-none-any.whl (10.3 MB)
+Using cached python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+Using cached altair-6.3.0-py3-none-any.whl (797 kB)
+Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
+Using cached charset_normalizer-3.5.2-cp311-cp311-win_amd64.whl (214 kB)
+Using cached click-8.5.0-py3-none-any.whl (125 kB)
+Downloading httptools-0.9.0-cp311-cp311-win_amd64.whl (92 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Using cached protobuf-7.36.2-cp310-abi3-win_amd64.whl (456 kB)
+Using cached pyarrow-25.0.1-cp311-cp311-win_amd64.whl (27.9 MB)
+Using cached pydeck-0.9.3-py2.py3-none-any.whl (11.4 MB)
+Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+Using cached watchdog-6.0.0-py3-none-win_amd64.whl (79 kB)
+Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+Downloading pydantic_core-2.50.1-cp311-cp311-win_amd64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 24.5 MB/s  0:00:00
+Downloading pydantic_settings-2.16.0-py3-none-any.whl (80 kB)
+Using cached sqlalchemy-2.1.4-cp311-cp311-win_amd64.whl (2.4 MB)
+Using cached python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Downloading pypdf-6.20.1-py3-none-any.whl (402 kB)
+Using cached python_docx-1.2.0-py3-none-any.whl (252 kB)
+Using cached openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+Downloading langchain-1.4.5-py3-none-any.whl (166 kB)
+Downloading langchain_core-1.6.10-py3-none-any.whl (573 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 573.3/573.3 kB 10.0 MB/s  0:00:00
+Downloading langgraph-1.2.15-py3-none-any.whl (259 kB)
+Downloading jsonpatch-1.35-py3-none-any.whl (17 kB)
+Downloading langgraph_checkpoint-4.3.0-py3-none-any.whl (58 kB)
+Downloading langgraph_prebuilt-1.1.0-py3-none-any.whl (41 kB)
+Downloading langgraph_sdk-0.4.7-py3-none-any.whl (162 kB)
+Downloading langsmith-0.14.8-py3-none-any.whl (862 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 862.4/862.4 kB 19.4 MB/s  0:00:00
+Using cached httpx2-2.13.1-py3-none-any.whl (95 kB)
+Using cached httpcore2-2.13.1-py3-none-any.whl (83 kB)
+Using cached pyyaml-6.0.3-cp311-cp311-win_amd64.whl (158 kB)
+Using cached tenacity-9.2.1-py3-none-any.whl (32 kB)
+Using cached uuid_utils-0.17.1-cp311-cp311-win_amd64.whl (178 kB)
+Downloading websockets-16.1.1-cp311-cp311-win_amd64.whl (180 kB)
+Using cached langchain_ollama-1.1.0-py3-none-any.whl (31 kB)
+Using cached ollama-0.6.3-py3-none-any.whl (16 kB)
+Using cached pytest-9.1.1-py3-none-any.whl (386 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading ruff-0.17.0-py3-none-win_amd64.whl (10.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.1/10.1 MB 27.4 MB/s  0:00:00
+Downloading aiohttp-3.14.5-cp311-cp311-win_amd64.whl (512 kB)
+Downloading multidict-7.1.0-cp311-cp311-win_amd64.whl (93 kB)
+Using cached yarl-1.25.1-cp311-cp311-win_amd64.whl (102 kB)
+Using cached aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Using cached annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached bcrypt-5.0.0-cp39-abi3-win_amd64.whl (150 kB)
+Using cached build-1.6.1-py3-none-any.whl (31 kB)
+Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
+Using cached cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading contourpy-1.3.3-cp311-cp311-win_amd64.whl (225 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached distro-1.9.0-py3-none-any.whl (20 kB)
+Downloading fonttools-4.67.0-cp311-cp311-win_amd64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 22.0 MB/s  0:00:00
+Using cached frozenlist-1.8.0-cp311-cp311-win_amd64.whl (44 kB)
+Downloading grpcio-1.84.0-cp311-cp311-win_amd64.whl (5.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 26.6 MB/s  0:00:00
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading jsonpointer-3.2.1-py3-none-any.whl (8.3 kB)
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading kiwisolver-1.5.1-cp311-cp311-win_amd64.whl (70 kB)
+Downloading kubernetes-37.0.1-py2.py3-none-any.whl (7.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 27.3 MB/s  0:00:00
+Downloading aiohttp_retry-2.9.1-py3-none-any.whl (10.0 kB)
+Using cached durationpy-0.11-py3-none-any.whl (4.1 kB)
+Using cached langchain_protocol-0.0.19-py3-none-any.whl (7.3 kB)
+Using cached lxml-6.1.3-cp311-cp311-win_amd64.whl (4.0 MB)
+Downloading mmh3-5.3.1-cp311-cp311-win_amd64.whl (41 kB)
+Using cached narwhals-2.27.1-py3-none-any.whl (483 kB)
+Downloading onnxruntime-1.31.0-cp311-cp311-win_amd64.whl (14.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.9/14.9 MB 28.4 MB/s  0:00:00
+Using cached opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+Using cached opentelemetry_exporter_otlp_proto_grpc-1.45.1-py3-none-any.whl (19 kB)
+Using cached opentelemetry_exporter_otlp_common-0.66b1-py3-none-any.whl (12 kB)
+Using cached opentelemetry_exporter_otlp_proto_common-1.45.1-py3-none-any.whl (15 kB)
+Using cached opentelemetry_proto-1.45.1-py3-none-any.whl (72 kB)
+Downloading googleapis_common_protos-1.75.5-py3-none-any.whl (307 kB)
+Using cached opentelemetry_sdk-1.45.1-py3-none-any.whl (140 kB)
+Using cached opentelemetry_semantic_conventions-0.66b1-py3-none-any.whl (206 kB)
+Using cached orjson-3.13.0-cp311-cp311-win_amd64.whl (121 kB)
+Downloading ormsgpack-1.12.2-cp311-cp311-win_amd64.whl (117 kB)
+Using cached overrides-7.7.0-py3-none-any.whl (17 kB)
+Using cached propcache-0.5.4-cp311-cp311-win_amd64.whl (46 kB)
+Downloading pybase64-1.5.1-cp311-cp311-win_amd64.whl (44 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 21.0 MB/s  0:00:00
+Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Using cached pypika-0.51.1-py2.py3-none-any.whl (60 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading regex-2026.9.29-cp311-cp311-win_amd64.whl (280 kB)
+Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Using cached rich-15.0.0-py3-none-any.whl (310 kB)
+Using cached markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Using cached rpds_py-2026.9.1-cp311-cp311-win_amd64.whl (226 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+Using cached typer-0.27.3-py3-none-any.whl (123 kB)
+Using cached shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Using cached typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Using cached tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl (290 kB)
+Downloading websocket_client-1.9.2-py3-none-any.whl (95 kB)
+Using cached xxhash-4.0.1-cp311-cp311-win_amd64.whl (36 kB)
+Using cached zstandard-0.25.0-cp311-cp311-win_amd64.whl (506 kB)
+Using cached et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Using cached flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Using cached importlib_resources-7.1.0-py3-none-any.whl (37 kB)
+Using cached psutil-7.2.2-cp37-abi3-win_amd64.whl (137 kB)
+Using cached pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+Using cached requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Using cached oauthlib-4.0.0-py3-none-any.whl (159 kB)
+Installing collected packages: pytz, pypika, flatbuffers, durationpy, zstandard, xxhash, websockets, websocket-client, watchdog, uuid-utils, urllib3, tzdata, typing-inspection, truststore, toml, threadpoolctl, tenacity, sqlalchemy, sniffio, six, shellingham, sentencepiece, scipy, safetensors, ruff, rpds-py, regex, pyyaml, python-multipart, python-dotenv, pyproject_hooks, pypdf, pyparsing, pygments, pydantic-core, pybase64, pyarrow, psutil, protobuf, propcache, pluggy, overrides, ormsgpack, orjson, opentelemetry-api, oauthlib, narwhals, multidict, mmh3, mdurl, lxml, langchain-protocol, kiwisolver, jsonpointer, itsdangerous, iniconfig, importlib-resources, idna, httptools, h11, grpcio, fsspec, frozenlist, fonttools, et-xmlfile, distro, dill, cycler, contourpy, colorama, cloudpickle, click, charset_normalizer, certifi, bcrypt, attrs, annotated-types, annotated-doc, aiohappyeyeballs, yarl, uvicorn, tqdm, requests, referencing, python-docx, python-dateutil, pytest, pydeck, pydantic, opentelemetry-semantic-conventions, opentelemetry-proto, openpyxl, onnxruntime, multiprocess, markdown-it-py, jsonpatch, joblib, httpcore2, httpcore, googleapis-common-protos, build, anyio, aiosignal, watchfiles, starlette, scikit-learn, rich, requests-toolbelt, requests-oauthlib, pydantic-settings, pandas, opentelemetry-sdk, opentelemetry-exporter-otlp-proto-common, matplotlib, jsonschema-specifications, huggingface-hub, httpx2, httpx, aiohttp, typer, tokenizers, seaborn, opentelemetry-exporter-otlp-common, ollama, langsmith, jsonschema, fastapi, aiohttp-retry, accelerate, transformers, opentelemetry-exporter-otlp-proto-grpc, langchain-core, kubernetes, datasets, altair, streamlit, sentence-transformers,langgraph-sdk, langgraph-checkpoint, langchain-ollama, evaluate, chromadb, langgraph-prebuilt, langgraph, langchain
+  Attempting uninstall: fsspec
+    Found existing installation: fsspec 2026.7.0
+    Uninstalling fsspec-2026.7.0:
+      Successfully uninstalled fsspec-2026.7.0
+Successfully installed accelerate-1.15.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiohttp-retry-2.9.1 aiosignal-1.4.0 altair-6.3.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 attrs-26.1.0 bcrypt-5.0.0 build-1.6.1 certifi-2026.7.22 charset_normalizer-3.5.2 chromadb-1.5.9 click-8.5.0 cloudpickle-3.1.2 colorama-0.4.6 contourpy-1.3.3 cycler-0.12.1 datasets-4.8.5 dill-0.4.1 distro-1.9.0 durationpy-0.11 et-xmlfile-2.0.0 evaluate-0.4.6 fastapi-0.143.1 flatbuffers-25.12.19 fonttools-4.67.0 frozenlist-1.8.0 fsspec-2026.2.0 googleapis-common-protos-1.75.5 grpcio-1.84.0 h11-0.16.0 httpcore-1.0.9 httpcore2-2.13.1 httptools-0.9.0 httpx-0.28.1 httpx2-2.13.1 huggingface-hub-0.36.2 idna-3.20 importlib-resources-7.1.0 iniconfig-2.3.1 itsdangerous-2.2.0 joblib-1.6.0 jsonpatch-1.35 jsonpointer-3.2.1 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 kiwisolver-1.5.1 kubernetes-37.0.1 langchain-1.4.5 langchain-core-1.6.10 langchain-ollama-1.1.0 langchain-protocol-0.0.19 langgraph-1.2.15 langgraph-checkpoint-4.3.0 langgraph-prebuilt-1.1.0 langgraph-sdk-0.4.7 langsmith-0.14.8 lxml-6.1.3 markdown-it-py-4.2.0 matplotlib-3.11.2 mdurl-0.1.2 mmh3-5.3.1 multidict-7.1.0 multiprocess-0.70.19 narwhals-2.27.1 oauthlib-4.0.0 ollama-0.6.3 onnxruntime-1.31.0 openpyxl-3.1.5 opentelemetry-api-1.45.1 opentelemetry-exporter-otlp-common-0.66b1 opentelemetry-exporter-otlp-proto-common-1.45.1 opentelemetry-exporter-otlp-proto-grpc-1.45.1 opentelemetry-proto-1.45.1 opentelemetry-sdk-1.45.1 opentelemetry-semantic-conventions-0.66b1 orjson-3.13.0 ormsgpack-1.12.2 overrides-7.7.0 pandas-2.3.3 pluggy-1.6.0 propcache-0.5.4 protobuf-7.36.2 psutil-7.2.2 pyarrow-25.0.1 pybase64-1.5.1 pydantic-2.14.1 pydantic-core-2.50.1 pydantic-settings-2.16.0 pydeck-0.9.3 pygments-2.21.0 pyparsing-3.3.3 pypdf-6.20.1 pypika-0.51.1 pyproject_hooks-1.3.3 pytest-9.1.1 python-dateutil-2.9.0.post0 python-docx-1.2.0 python-dotenv-1.2.4 python-multipart-0.0.32 pytz-2026.5 pyyaml-6.0.3 referencing-0.37.0 regex-2026.9.29 requests-2.34.2 requests-oauthlib-2.0.0 requests-toolbelt-1.0.0 rich-15.0.0 rpds-py-2026.9.1 ruff-0.17.0 safetensors-0.8.0 scikit-learn-1.9.1 scipy-1.17.1 seaborn-0.13.2 sentence-transformers-5.7.0 sentencepiece-0.2.2 shellingham-1.5.4 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.1.4 starlette-1.8.0 streamlit-1.65.0 tenacity-9.2.1 threadpoolctl-3.7.0 tokenizers-0.22.2 toml-0.10.2 tqdm-4.70.1 transformers-4.57.6 truststore-0.10.5 typer-0.27.3 typing-inspection-0.4.4 tzdata-2026.5 urllib3-2.8.0 uuid-utils-0.17.1 uvicorn-0.54.0 watchdog-6.0.0 watchfiles-1.3.0 websocket-client-1.9.2 websockets-16.1.1 xxhash-4.0.1 yarl-1.25.1 zstandard-0.25.0
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> python training/train_classifier.py --target queue --epochs 3 --batch-size 4
+Rows: total=28587, train=22869, validation=2859, test=2859
+Target=queue; classes=10; CUDA=True
+tokenizer_config.json: 100%|██████████████████████████████████████████████████████████████████| 25.0/25.0 [00:00<?, ?B/s]
+config.json: 100%|██████████████████████████████████████████████████████████████████████████████| 615/615 [00:00<?, ?B/s]
+sentencepiece.bpe.model: 100%|██████████████████████████████████████████████████████| 5.07M/5.07M [00:00<00:00, 9.77MB/s]
+tokenizer.json: 9.10MB [00:00, 71.8MB/s]
+Map: 100%|███████████████████████████████████████████████████████████████| 22869/22869 [00:00<00:00, 29258.69 examples/s]
+Map: 100%|█████████████████████████████████████████████████████████████████| 2859/2859 [00:00<00:00, 25771.97 examples/s]
+Map: 100%|█████████████████████████████████████████████████████████████████| 2859/2859 [00:00<00:00, 25668.86 examples/s]
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+model.safetensors: 100%|████████████████████████████████████████████████████████████| 1.12G/1.12G [00:36<00:00, 30.6MB/s]
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at FacebookAI/xlm-roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'loss': 2.0667, 'grad_norm': 5.977838516235352, 'learning_rate': 1.9771561771561775e-05, 'epoch': 0.03}                 
+{'loss': 2.0, 'grad_norm': 6.977859973907471, 'learning_rate': 1.953846153846154e-05, 'epoch': 0.07}                     
+{'loss': 1.8399, 'grad_norm': 5.132034778594971, 'learning_rate': 1.9305361305361307e-05, 'epoch': 0.1}                  
+{'loss': 1.7964, 'grad_norm': inf, 'learning_rate': 1.9072261072261072e-05, 'epoch': 0.14}                               
+{'loss': 1.7629, 'grad_norm': 5.86343240737915, 'learning_rate': 1.883916083916084e-05, 'epoch': 0.17}                   
+{'loss': 1.8087, 'grad_norm': 6.252686977386475, 'learning_rate': 1.8606060606060607e-05, 'epoch': 0.21}                 
+{'loss': 1.763, 'grad_norm': 6.518886566162109, 'learning_rate': 1.8372960372960373e-05, 'epoch': 0.24}                  
+{'loss': 1.7635, 'grad_norm': 8.66151237487793, 'learning_rate': 1.8139860139860142e-05, 'epoch': 0.28}                  
+{'loss': 1.7116, 'grad_norm': 5.383123397827148, 'learning_rate': 1.7906759906759907e-05, 'epoch': 0.31}                 
+{'loss': 1.6843, 'grad_norm': 5.981942653656006, 'learning_rate': 1.7673659673659676e-05, 'epoch': 0.35}                 
+{'loss': 1.7486, 'grad_norm': 6.829964637756348, 'learning_rate': 1.7440559440559442e-05, 'epoch': 0.38}                 
+{'loss': 1.7283, 'grad_norm': 6.911277770996094, 'learning_rate': 1.7207459207459208e-05, 'epoch': 0.42}                 
+{'loss': 1.6697, 'grad_norm': 5.14306116104126, 'learning_rate': 1.6974358974358977e-05, 'epoch': 0.45}                  
+{'loss': 1.6615, 'grad_norm': 5.042386054992676, 'learning_rate': 1.6741258741258743e-05, 'epoch': 0.49}                 
+{'loss': 1.6613, 'grad_norm': 6.7571330070495605, 'learning_rate': 1.6508158508158508e-05, 'epoch': 0.52}                
+{'loss': 1.7264, 'grad_norm': 45.43265914916992, 'learning_rate': 1.6275058275058274e-05, 'epoch': 0.56}                 
+{'loss': 1.6538, 'grad_norm': 6.265537738800049, 'learning_rate': 1.6041958041958043e-05, 'epoch': 0.59}                 
+{'loss': 1.6874, 'grad_norm': 129.1006622314453, 'learning_rate': 1.580885780885781e-05, 'epoch': 0.63}                  
+{'loss': 1.6562, 'grad_norm': 11.641590118408203, 'learning_rate': 1.5575757575757578e-05, 'epoch': 0.66}                
+{'loss': 1.6402, 'grad_norm': 7.131355285644531, 'learning_rate': 1.5342657342657343e-05, 'epoch': 0.7}                  
+{'loss': 1.6406, 'grad_norm': 6.235503673553467, 'learning_rate': 1.510955710955711e-05, 'epoch': 0.73}                  
+{'loss': 1.675, 'grad_norm': 11.376893997192383, 'learning_rate': 1.4876456876456876e-05, 'epoch': 0.77}                 
+{'loss': 1.6447, 'grad_norm': 10.495598793029785, 'learning_rate': 1.4643356643356646e-05, 'epoch': 0.8}                 
+{'loss': 1.6262, 'grad_norm': 7.284579753875732, 'learning_rate': 1.4410256410256411e-05, 'epoch': 0.84}                 
+{'loss': 1.6206, 'grad_norm': 11.294000625610352, 'learning_rate': 1.4177156177156179e-05, 'epoch': 0.87}                
+{'loss': 1.584, 'grad_norm': 5.567800045013428, 'learning_rate': 1.3944055944055946e-05, 'epoch': 0.91}                  
+{'loss': 1.6543, 'grad_norm': 8.99755859375, 'learning_rate': 1.3710955710955712e-05, 'epoch': 0.94}                     
+{'loss': 1.622, 'grad_norm': 7.0558695793151855, 'learning_rate': 1.3477855477855479e-05, 'epoch': 0.98}                 
+{'eval_loss': 1.5863171815872192, 'eval_accuracy': 0.41622945085694296, 'eval_f1_macro': 0.28727544361743085, 'eval_f1_weighted': 0.39207248164553266, 'eval_runtime': 10.8935, 'eval_samples_per_second': 262.451, 'eval_steps_per_second': 65.636, 'epoch': 1.0}
+{'loss': 1.6197, 'grad_norm': 5.509802341461182, 'learning_rate': 1.3244755244755245e-05, 'epoch': 1.01}                 
+{'loss': 1.6023, 'grad_norm': 7.688116550445557, 'learning_rate': 1.3011655011655014e-05, 'epoch': 1.05}                 
+{'loss': 1.5599, 'grad_norm': 6.927468776702881, 'learning_rate': 1.277855477855478e-05, 'epoch': 1.08}                  
+{'loss': 1.5994, 'grad_norm': 9.625946044921875, 'learning_rate': 1.2545454545454547e-05, 'epoch': 1.12}                 
+{'loss': 1.6124, 'grad_norm': 7.8343119621276855, 'learning_rate': 1.2312354312354313e-05, 'epoch': 1.15}                
+{'loss': 1.5688, 'grad_norm': 8.277427673339844, 'learning_rate': 1.2079254079254082e-05, 'epoch': 1.19}                 
+{'loss': 1.5667, 'grad_norm': 12.821616172790527, 'learning_rate': 1.1846153846153847e-05, 'epoch': 1.22}                
+{'loss': 1.5591, 'grad_norm': 13.773215293884277, 'learning_rate': 1.1613053613053613e-05, 'epoch': 1.26}                
+{'loss': 1.5862, 'grad_norm': 13.32214069366455, 'learning_rate': 1.1379953379953382e-05, 'epoch': 1.29}                 
+{'loss': 1.5731, 'grad_norm': 8.794401168823242, 'learning_rate': 1.1146853146853148e-05, 'epoch': 1.33}                 
+{'loss': 1.5, 'grad_norm': 10.416863441467285, 'learning_rate': 1.0913752913752915e-05, 'epoch': 1.36}                   
+{'loss': 1.5981, 'grad_norm': 8.297110557556152, 'learning_rate': 1.068065268065268e-05, 'epoch': 1.4}                   
+{'loss': 1.5938, 'grad_norm': 10.277996063232422, 'learning_rate': 1.044755244755245e-05, 'epoch': 1.43}                 
+{'loss': 1.5827, 'grad_norm': 8.142718315124512, 'learning_rate': 1.0214452214452216e-05, 'epoch': 1.47}                 
+{'loss': 1.5389, 'grad_norm': 7.5893378257751465, 'learning_rate': 9.981351981351983e-06, 'epoch': 1.5}                  
+{'loss': 1.5291, 'grad_norm': 11.331024169921875, 'learning_rate': 9.748251748251749e-06, 'epoch': 1.54}                 
+{'loss': 1.5882, 'grad_norm': 8.417261123657227, 'learning_rate': 9.515151515151516e-06, 'epoch': 1.57}                  
+{'loss': 1.588, 'grad_norm': 7.95158576965332, 'learning_rate': 9.282051282051283e-06, 'epoch': 1.61}                    
+{'loss': 1.5458, 'grad_norm': 9.041596412658691, 'learning_rate': 9.04895104895105e-06, 'epoch': 1.64}                   
+{'loss': 1.5427, 'grad_norm': 10.581193923950195, 'learning_rate': 8.815850815850816e-06, 'epoch': 1.68}                 
+{'loss': 1.5093, 'grad_norm': 8.960927963256836, 'learning_rate': 8.582750582750584e-06, 'epoch': 1.71}                  
+{'loss': 1.4826, 'grad_norm': 15.22397518157959, 'learning_rate': 8.34965034965035e-06, 'epoch': 1.75}                   
+{'loss': 1.5276, 'grad_norm': 10.364821434020996, 'learning_rate': 8.116550116550117e-06, 'epoch': 1.78}                 
+{'loss': 1.5442, 'grad_norm': 12.93848991394043, 'learning_rate': 7.883449883449884e-06, 'epoch': 1.82}                  
+{'loss': 1.4643, 'grad_norm': 9.44564151763916, 'learning_rate': 7.650349650349652e-06, 'epoch': 1.85}                   
+{'loss': 1.4914, 'grad_norm': 10.500482559204102, 'learning_rate': 7.417249417249418e-06, 'epoch': 1.89}                 
+{'loss': 1.5768, 'grad_norm': 39.16407775878906, 'learning_rate': 7.1841491841491854e-06, 'epoch': 1.92}                 
+{'loss': 1.5281, 'grad_norm': 12.299369812011719, 'learning_rate': 6.951048951048952e-06, 'epoch': 1.96}                 
+{'loss': 1.487, 'grad_norm': 7.6882219314575195, 'learning_rate': 6.717948717948718e-06, 'epoch': 1.99}                  
+{'eval_loss': 1.5022820234298706, 'eval_accuracy': 0.44735921650926896, 'eval_f1_macro': 0.33305281768611383, 'eval_f1_weighted': 0.4186892645835322, 'eval_runtime': 13.1128, 'eval_samples_per_second': 218.032, 'eval_steps_per_second': 54.527,'epoch': 2.0}
+{'loss': 1.4544, 'grad_norm': 10.016571044921875, 'learning_rate': 6.484848484848485e-06, 'epoch': 2.03}                 
+{'loss': 1.4671, 'grad_norm': 10.435076713562012, 'learning_rate': 6.2517482517482516e-06, 'epoch': 2.06}                
+{'loss': 1.4641, 'grad_norm': 9.836050033569336, 'learning_rate': 6.018648018648019e-06, 'epoch': 2.1}                   
+{'loss': 1.4469, 'grad_norm': 6.675045013427734, 'learning_rate': 5.785547785547786e-06, 'epoch': 2.13}                  
+{'loss': 1.4448, 'grad_norm': 9.147193908691406, 'learning_rate': 5.552447552447553e-06, 'epoch': 2.17}                  
+{'loss': 1.4666, 'grad_norm': 14.106618881225586, 'learning_rate': 5.31934731934732e-06, 'epoch': 2.2}                   
+{'loss': 1.4508, 'grad_norm': 10.162745475769043, 'learning_rate': 5.086247086247087e-06, 'epoch': 2.24}                 
+{'loss': 1.4739, 'grad_norm': 13.599456787109375, 'learning_rate': 4.853146853146853e-06, 'epoch': 2.27}                 
+{'loss': 1.4725, 'grad_norm': 11.481815338134766, 'learning_rate': 4.620046620046621e-06, 'epoch': 2.31}                 
+{'loss': 1.494, 'grad_norm': 15.822502136230469, 'learning_rate': 4.386946386946387e-06, 'epoch': 2.34}                  
+{'loss': 1.4205, 'grad_norm': 8.457160949707031, 'learning_rate': 4.1538461538461545e-06, 'epoch': 2.38}                 
+{'loss': 1.3816, 'grad_norm': 18.73295021057129, 'learning_rate': 3.920745920745921e-06, 'epoch': 2.41}                  
+{'loss': 1.4403, 'grad_norm': 10.226180076599121, 'learning_rate': 3.687645687645688e-06, 'epoch': 2.45}                 
+{'loss': 1.4301, 'grad_norm': 22.742021560668945, 'learning_rate': 3.454545454545455e-06, 'epoch': 2.48}                 
+{'loss': 1.4557, 'grad_norm': 11.340311050415039, 'learning_rate': 3.221445221445222e-06, 'epoch': 2.52}                 
+{'loss': 1.3536, 'grad_norm': 18.183279037475586, 'learning_rate': 2.9883449883449884e-06, 'epoch': 2.55}                
+{'loss': 1.4219, 'grad_norm': 14.73651123046875, 'learning_rate': 2.7552447552447554e-06, 'epoch': 2.59}                 
+{'loss': 1.3835, 'grad_norm': 12.090838432312012, 'learning_rate': 2.5221445221445223e-06, 'epoch': 2.62}                
+{'loss': 1.4317, 'grad_norm': 15.876619338989258, 'learning_rate': 2.2890442890442893e-06, 'epoch': 2.66}                
+{'loss': 1.4299, 'grad_norm': 14.367462158203125, 'learning_rate': 2.0559440559440562e-06, 'epoch': 2.69}                
+{'loss': 1.4449, 'grad_norm': 13.739953994750977, 'learning_rate': 1.822843822843823e-06, 'epoch': 2.73}                 
+{'loss': 1.4431, 'grad_norm': 12.060052871704102, 'learning_rate': 1.5897435897435897e-06, 'epoch': 2.76}                
+{'loss': 1.4387, 'grad_norm': 18.144546508789062, 'learning_rate': 1.3566433566433567e-06, 'epoch': 2.8}                 
+{'loss': 1.3927, 'grad_norm': 15.529420852661133, 'learning_rate': 1.1235431235431236e-06, 'epoch': 2.83}                
+{'loss': 1.419, 'grad_norm': 16.14914894104004, 'learning_rate': 8.904428904428905e-07, 'epoch': 2.87}                   
+{'loss': 1.4472, 'grad_norm': 18.66313934326172, 'learning_rate': 6.573426573426573e-07, 'epoch': 2.9}                   
+{'loss': 1.3818, 'grad_norm': 12.403310775756836, 'learning_rate': 4.242424242424243e-07, 'epoch': 2.94}                 
+{'loss': 1.3967, 'grad_norm': 17.285133361816406, 'learning_rate': 1.9114219114219117e-07, 'epoch': 2.97}                
+{'eval_loss': 1.482440710067749, 'eval_accuracy': 0.4603008044770899, 'eval_f1_macro': 0.3589740939909382, 'eval_f1_weighted': 0.43541903078362887, 'eval_runtime': 7.4076, 'eval_samples_per_second': 385.956, 'eval_steps_per_second': 96.523, 'epoch': 3.0}
+{'train_runtime': 1603.9152, 'train_samples_per_second': 42.775, 'train_steps_per_second': 2.675, 'train_loss': 1.5671411696569626, 'epoch': 3.0}                                                                                                  
+100%|████████████████████████████████████████████████████████████████████████████████| 4290/4290 [26:43<00:00,  2.67it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████| 715/715 [00:07<00:00, 95.81it/s]
+
+Held-out test results:
+                                 precision    recall  f1-score   support
+
+           Billing and Payments       0.79      0.71      0.75       279
+               Customer Service       0.37      0.37      0.37       427
+                General Inquiry       0.00      0.00      0.00        40
+                Human Resources       0.75      0.05      0.10        58
+                     IT Support       0.37      0.26      0.30       343
+                Product Support       0.41      0.41      0.41       525
+          Returns and Exchanges       0.70      0.18      0.29       144
+            Sales and Pre-Sales       0.47      0.15      0.23        92
+Service Outages and Maintenance       0.67      0.69      0.68       115
+              Technical Support       0.48      0.70      0.57       836
+
+                       accuracy                           0.48      2859
+                      macro avg       0.50      0.35      0.37      2859
+                   weighted avg       0.48      0.48      0.46      2859
+
+
+Saved model to: S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot\artifacts\queue
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

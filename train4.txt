@@ -1,0 +1,26 @@
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> python training/train_textcnn.py --target queue --epochs 4 --batch-size 32
+epoch=1 loss=1.9343 val_accuracy=0.3949 val_macro_f1=0.2187
+epoch=2 loss=1.7302 val_accuracy=0.4267 val_macro_f1=0.3018
+epoch=3 loss=1.5532 val_accuracy=0.4362 val_macro_f1=0.3550
+epoch=4 loss=1.3105 val_accuracy=0.4474 val_macro_f1=0.3706
+
+Held-out test report:
+                                 precision    recall  f1-score   support
+
+           Billing and Payments       0.73      0.75      0.74       279
+               Customer Service       0.58      0.16      0.25       427
+                General Inquiry       0.23      0.23      0.23        40
+                Human Resources       1.00      0.16      0.27        58
+                     IT Support       0.48      0.20      0.29       343
+                Product Support       0.32      0.58      0.41       525
+          Returns and Exchanges       0.77      0.14      0.24       144
+            Sales and Pre-Sales       0.50      0.07      0.12        92
+Service Outages and Maintenance       0.64      0.66      0.65       115
+              Technical Support       0.47      0.65      0.55       836
+
+                       accuracy                           0.46      2859
+                      macro avg       0.57      0.36      0.37      2859
+                   weighted avg       0.52      0.46      0.43      2859
+
+Saved TextCNN model: S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot\artifacts\textcnn_queue
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> 
