@@ -8,7 +8,27 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app-shell">
+  <section class="login-screen" id="loginScreen" aria-labelledby="loginTitle">
+    <div class="login-card">
+      <div class="login-brand-mark">✦</div>
+      <p class="login-eyebrow">IT SERVICE DESK</p>
+      <h1 id="loginTitle">Welcome to SupportPilot</h1>
+      <p class="login-description">Sign in to manage support tickets and review AI-assisted triage.</p>
+      <form id="adminLoginForm" class="login-form">
+        <label for="adminEmail">Admin email</label>
+        <input id="adminEmail" name="email" type="email" autocomplete="username" placeholder="Enter admin email" required />
+        <label for="adminPassword">Password</label>
+        <div class="password-input-wrap">
+          <input id="adminPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter password" required />
+          <button type="button" id="togglePassword" class="password-toggle" aria-label="Show password">Show</button>
+        </div>
+        <p id="loginError" class="login-error" role="alert" aria-live="polite"></p>
+        <button type="submit" class="primary-button login-submit">Sign in</button>
+      </form>
+      <p class="login-footnote">Authorized project demo access</p>
+    </div>
+  </section>
+  <div class="app-shell auth-hidden" id="appShell">
     <aside class="sidebar" id="sidebar">
       <a class="brand" href="#" aria-label="SupportPilot home">
         <span class="brand-mark">✦</span>
@@ -49,6 +69,7 @@
         <div class="breadcrumbs">Workspace <span>/</span> <strong id="breadcrumbCurrent">Overview</strong></div>
         <div class="topbar-right">
           <span class="demo-pill" id="apiStatusPill"><span></span> Connecting API…</span>
+          <button class="secondary-button signout-button" id="signOutButton" type="button">Sign out</button>
           <button class="icon-button" id="clearSearch" title="Clear search" aria-label="Clear search">⌕</button>
           <div class="top-avatar">SA</div>
         </div>

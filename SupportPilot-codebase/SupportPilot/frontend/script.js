@@ -472,4 +472,64 @@ async function init() {
   }
 }
 
-init();
+function setupAdminLogin() {
+  const AUTH_EMAIL = "admingroup4@gmail.com";
+  const AUTH_PASSWORD = "12345678";
+  const SESSION_KEY = "supportpilot_admin_session";
+  const loginScreen = document.getElementById("loginScreen");
+  const appShell = document.getElementById("appShell");
+  const loginForm = document.getElementById("adminLoginForm");
+  const loginError = document.getElementById("loginError");
+  const passwordInput = document.getElementById("adminPassword");
+  const togglePassword = document.getElementById("togglePassword");
+  const signOutButton = document.getElementById("signOutButton");
+
+  function showDashboard() {
+    loginScreen.classList.add("login-hidden");
+    appShell.classList.remove("auth-hidden");
+    if (!appShell.dataset.initialized) {
+      appShell.dataset.initialized = "true";
+      init();
+    }
+  }
+
+  function showLogin() {
+    appShell.classList.add("auth-hidden");
+    loginScreen.classList.remove("login-hidden");
+    loginForm.reset();
+    loginError.textContent = "";
+    sessionStorage.removeItem(SESSION_KEY);
+  }
+
+  loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const email = document.getElementById("adminEmail").value.trim().toLowerCase();
+    const password = passwordInput.value;
+    if (email === AUTH_EMAIL && password === AUTH_PASSWORD) {
+      sessionStorage.setItem(SESSION_KEY, "authenticated");
+      loginError.textContent = "";
+      showDashboard();
+    } else {
+      loginError.textContent = "Incorrect email or password. Please try again.";
+      passwordInput.focus();
+    }
+  });
+
+  togglePassword.addEventListener("click", () => {
+    const shouldShow = passwordInput.type === "password";
+    passwordInput.type = shouldShow ? "text" : "password";
+    togglePassword.textContent = shouldShow ? "Hide" : "Show";
+    togglePassword.setAttribute("aria-label", shouldShow ? "Hide password" : "Show password");
+  });
+
+  signOutButton.addEventListener("click", showLogin);
+
+  if (sessionStorage.getItem(SESSION_KEY) === "authenticated") {
+    showDashboard();
+  } else {
+    appShell.classList.add("auth-hidden");
+    loginScreen.classList.remove("login-hidden");
+  }
+}
+
+setupAdminLogin();
