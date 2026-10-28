@@ -15,8 +15,9 @@ def read_ticket(ticket_id: str) -> dict[str, Any] | None:
     if row is None:
         return None
     result = dict(row)
-    result["tags"] = json.loads(result.pop("tags_json", "[]"))
-    result["sources"] = json.loads(result.pop("sources_json", "[]"))
+    result["tags"] = json.loads(result.pop("tags_json", "[]") or "[]")
+    result["sources"] = json.loads(result.pop("sources_json", "[]") or "[]")
+    result["predictions"] = json.loads(result.pop("predictions_json", "{}") or "{}")
     result["escalated"] = bool(result["escalated"])
     return result
 
@@ -34,7 +35,8 @@ def create_jira_issue(ticket_id: str) -> dict[str, Any]:
     description_text = (
         f"SupportPilot ticket ID: {ticket_id}\n"
         f"Predicted queue: {ticket.get('queue') or 'unavailable'}\n"
-        f"Predicted priority: {ticket.get('priority') or 'unavailable'}\n\n"
+        f"Predicted priority: {ticket.get('priority') or 'unavailable'}\n"
+        f"Workflow status: {ticket.get('workflow_status', 'Open')}\n\n"
         f"Original ticket body:\n{ticket.get('body', '')}\n\n"
         f"AI response draft (requires human review):\n{ticket.get('response_draft') or 'No response draft available.'}"
     )
@@ -71,7 +73,7 @@ def send_ticket_email(ticket_id: str, recipient: str) -> dict[str, Any]:
     message["To"] = recipient
     message.set_content(
         "This message contains an AI-generated draft and must be reviewed before sending in a production workflow.\n\n"
-        f"Ticket ID: {ticket_id}\nStatus: {ticket.get('status')}\n\n"
+        f"Ticket ID: {ticket_id}\nStatus: {ticket.get('workflow_status', 'Open')}\n\n"
         f"Draft:\n{ticket.get('response_draft') or 'No response draft is available.'}\n\n"
         "This email was sent through the explicitly invoked SupportPilot integration."
     )

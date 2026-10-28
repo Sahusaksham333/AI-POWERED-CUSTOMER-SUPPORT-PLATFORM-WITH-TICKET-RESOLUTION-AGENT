@@ -1,0 +1,8 @@
+# Additional/runtime dependencies required by Milestone 2 RAG.
+# Install into the existing virtual environment; this does not retrain models.
+chromadb>=0.6,<2
+sentence-transformers>=3.3
+pypdf>=5.1
+python-docx>=1.1
+requests>=2.32
+python-dotenv>=1.0

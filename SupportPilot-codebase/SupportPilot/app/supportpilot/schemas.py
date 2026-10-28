@@ -15,6 +15,13 @@ class TicketRequest(BaseModel):
     contact_method: Literal["Email", "Phone", "Chat"] = "Email"
 
 
+class KnowledgeSearchRequest(BaseModel):
+    """Search the indexed SupportPilot knowledge base."""
+
+    query: str = Field(min_length=3, max_length=5000)
+    top_k: int = Field(default=4, ge=1, le=10)
+
+
 class TicketStatusRequest(BaseModel):
     status: Literal["Open", "In Progress", "Resolved"]
 

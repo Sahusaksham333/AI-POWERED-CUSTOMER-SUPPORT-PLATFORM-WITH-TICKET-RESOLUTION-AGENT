@@ -16,6 +16,9 @@ class TicketPipeline:
     def predict(self, subject: str, body: str) -> dict[str, Any]:
         text = f"{subject.strip()}\n\n{body.strip()}".strip()
         predictions = {target: self.classifier.predict(target, text) for target in ("queue", "type", "priority")}
+        # Run the existing TextCNN checkpoint side-by-side when it is available.
+        # XLM-RoBERTa remains the primary queue prediction; TextCNN is a comparison signal.
+        predictions["textcnn_queue"] = self.classifier.predict_textcnn(text)
         tags = self.classifier.predict_tags(text, top_k=3)
         reasons = escalation_reason(subject, body, predictions.get("priority", {}), predictions)
         return {"predictions": predictions, "tags": tags, "escalated": bool(reasons), "escalation_reasons": reasons,

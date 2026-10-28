@@ -24,6 +24,7 @@ def escalation_reason(subject: str, body: str, priority: dict[str, Any], predict
         pred = predictions.get(target, {})
         if pred.get("available") and pred.get("confidence") is not None and pred["confidence"] < MIN_CLASSIFIER_CONFIDENCE:
             reasons.append(f"low_{target}_confidence")
-    if not any(p.get("available") for p in predictions.values() if isinstance(p, dict)):
+    core_predictions = [predictions.get(target, {}) for target in ("queue", "priority", "type")]
+    if not any(p.get("available") for p in core_predictions if isinstance(p, dict)):
         reasons.append("classification_models_not_trained")
     return reasons

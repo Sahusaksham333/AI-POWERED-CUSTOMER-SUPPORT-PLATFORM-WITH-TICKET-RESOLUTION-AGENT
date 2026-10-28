@@ -12,7 +12,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from .supportpilot.schemas import (
-    TicketRequest, TicketStatusRequest, IntegrationTicketRequest, EmailTicketRequest,
+    TicketRequest, TicketStatusRequest, IntegrationTicketRequest, EmailTicketRequest, KnowledgeSearchRequest,
 )
 from .supportpilot.pipeline import TicketPipeline
 from .supportpilot.db import init_db, save_ticket, get_analytics, get_ticket, list_tickets, update_workflow_status
@@ -115,6 +115,25 @@ def set_ticket_status(ticket_id: str, request: TicketStatusRequest):
     if not update_workflow_status(ticket_id, request.status):
         raise HTTPException(status_code=404, detail="Ticket not found")
     return {"ticket_id": ticket_id, "workflow_status": request.status}
+
+
+@app.get("/knowledge/status")
+def knowledge_status():
+    """Report whether the RAG knowledge index is ready."""
+    return pipeline.retriever.health()
+
+
+@app.post("/knowledge/search")
+def knowledge_search(request: KnowledgeSearchRequest):
+    """Retrieve relevant indexed knowledge chunks without generating a draft."""
+    status = pipeline.retriever.health()
+    if not status.get("ready"):
+        raise HTTPException(
+            status_code=503,
+            detail=status.get("error") or "Knowledge retrieval is not ready.",
+        )
+    results = pipeline.retriever.search(request.query, top_k=request.top_k)
+    return {"query": request.query, "count": len(results), "sources": results}
 
 
 @app.get("/analytics")

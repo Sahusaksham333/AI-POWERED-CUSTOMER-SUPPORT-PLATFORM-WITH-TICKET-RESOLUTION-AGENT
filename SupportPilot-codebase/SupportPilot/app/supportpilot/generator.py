@@ -32,8 +32,9 @@ class OllamaGenerator:
         priority = predicted.get("priority", {}).get("label") or "unknown"
         queue = predicted.get("queue", {}).get("label") or "unknown"
         ticket_type = predicted.get("type", {}).get("label") or "unknown"
+        language_instruction = language if language and language.lower() not in {"auto", "unknown"} else "the language used by the requester"
         prompt = f"""You are SupportPilot, an IT/customer support response-drafting assistant.
-Produce a concise response draft in the ticket's language ({language or 'the language used by the requester'}).
+Produce a concise response draft in the ticket's language ({language_instruction}).
 Use the retrieved sources as the primary evidence. Never claim a ticket is fixed, a system was changed, or an action was completed.
 Do not invent policies, URLs, credentials, commands, or source citations. If the sources are insufficient, say what is unknown and recommend human review.
 For suspected security incidents, data breaches, malware, or broad outages, advise immediate escalation and avoid risky remediation steps.
