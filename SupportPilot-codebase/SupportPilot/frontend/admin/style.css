@@ -44,25 +44,4 @@ button:disabled{opacity:.6;cursor:wait;transform:none!important}
 
 .model-table td:last-child .confidence-line{max-width:240px;white-space:normal;overflow-wrap:anywhere;line-height:1.4}
 
-
-/* Admin sign-in screen additions */
-.auth-hidden { display: none !important; }
-.login-hidden { display: none !important; }
-.login-screen { min-height: 100vh; display: grid; place-items: center; padding: 28px 16px; background: radial-gradient(circle at top left, #e7edff 0, transparent 36%), var(--bg, #f5f7fb); }
-.login-card { width: min(100%, 430px); background: #fff; border: 1px solid #e3e8f1; border-radius: 18px; padding: 34px; box-shadow: 0 18px 55px rgba(25, 43, 76, .12); }
-.login-brand-mark { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; background: #4268e7; color: #fff; font-size: 29px; margin-bottom: 22px; }
-.login-eyebrow { margin: 0 0 8px; color: #5876d8; font-size: 10px; letter-spacing: 1.8px; font-weight: 800; }
-.login-card h1 { margin: 0; color: #1d2a40; font-size: 25px; letter-spacing: -.6px; }
-.login-description { margin: 10px 0 25px; color: #7c8799; font-size: 13px; line-height: 1.6; }
-.login-form { display: grid; gap: 9px; }
-.login-form label { margin-top: 7px; color: #3e4b60; font-size: 12px; font-weight: 700; }
-.login-form input { width: 100%; min-height: 43px; border: 1px solid #dfe5ef; border-radius: 8px; padding: 0 12px; outline: none; color: #25334a; background: #fff; font-size: 13px; }
-.login-form input:focus { border-color: #6c8af0; box-shadow: 0 0 0 3px rgba(66, 104, 231, .12); }
-.password-input-wrap { display: flex; align-items: center; position: relative; }
-.password-input-wrap input { padding-right: 58px; }
-.password-toggle { position: absolute; right: 9px; border: 0; background: transparent; color: #4b68cb; font-size: 11px; font-weight: 700; padding: 7px; }
-.login-error { min-height: 17px; margin: 2px 0 0; color: #c33e4b; font-size: 11px; }
-.login-submit { width: 100%; min-height: 43px; margin-top: 3px; }
-.login-footnote { margin: 22px 0 0; text-align: center; color: #9aa4b4; font-size: 10px; }
-.signout-button { padding: 8px 11px; font-size: 11px; }
-@media (max-width: 520px) { .login-card { padding: 25px 21px; } .topbar-right { gap: 8px; } .signout-button { padding: 7px 8px; } }
+.portal-switch{display:inline-flex;align-items:center;padding:8px 11px;border:1px solid #dfe5ef;border-radius:8px;color:#4564c7;text-decoration:none;font-size:11px;font-weight:700;background:#fff}.portal-switch:hover{background:#f4f6ff}@media(max-width:640px){.portal-switch{padding:7px 8px;font-size:10px}}
