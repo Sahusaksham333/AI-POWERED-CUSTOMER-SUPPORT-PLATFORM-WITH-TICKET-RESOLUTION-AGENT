@@ -1,0 +1,64 @@
+python scripts/index_knowledge_base.py --reset
+Loaded 2 files and prepared 168 chunks.
+modules.json: 100%|████████████████████████████████████████████████████████████████████████████| 229/229 [00:00<?, ?B/s]
+config_sentence_transformers.json: 100%|███████████████████████████████████████████████████████| 122/122 [00:00<?, ?B/s]
+README.md: 3.89kB [00:00, ?B/s]
+sentence_bert_config.json: 100%|██████████████████████████████████████████████████████| 53.0/53.0 [00:00<00:00, 105kB/s]
+config.json: 100%|█████████████████████████████████████████████████████████████████████████████| 645/645 [00:00<?, ?B/s]
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+model.safetensors: 100%|█████████████████████████████████████████████████████████████| 471M/471M [00:45<00:00, 10.4MB/s]
+tokenizer_config.json: 100%|███████████████████████████████████████████████████████████████████| 526/526 [00:00<?, ?B/s]
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+tokenizer.json: 100%|██████████████████████████████████████████████████████████████| 9.08M/9.08M [00:00<00:00, 16.3MB/s]
+special_tokens_map.json: 100%|██████████████████████████████████████████████████████████| 239/239 [00:00<00:00, 239kB/s]
+config.json: 100%|█████████████████████████████████████████████████████████████████████████████| 190/190 [00:00<?, ?B/s]
+Indexed 64/168 chunks
+Indexed 128/168 chunks
+Indexed 168/168 chunks
+Chroma collection ready at S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot\artifacts\chroma; total chunks: 168
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> 
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> pip install hf_xet                            
+Collecting hf_xet
+  Downloading hf_xet-1.8.0-cp38-abi3-win_amd64.whl.metadata (4.9 kB)
+Downloading hf_xet-1.8.0-cp38-abi3-win_amd64.whl (3.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 5.4 MB/s  0:00:00
+Installing collected packages: hf_xet
+Successfully installed hf_xet-1.8.0
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> pip install huggingface_hub[hf_xet]
+Requirement already satisfied: huggingface_hub[hf_xet] in S:\A Projects\AI-Powered Customer Support Platform with TicketResolution Agent\.venv\Lib\site-packages (0.36.2)
+Requirement already satisfied: filelock in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from huggingface_hub[hf_xet]) (3.32.3)
+Requirement already satisfied: fsspec>=2023.5.0 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from huggingface_hub[hf_xet]) (2026.2.0)
+Requirement already satisfied: packaging>=20.9 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from huggingface_hub[hf_xet]) (26.3)
+Requirement already satisfied: pyyaml>=5.1 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from huggingface_hub[hf_xet]) (6.0.3)
+Requirement already satisfied: requests in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from huggingface_hub[hf_xet]) (2.34.2)
+Requirement already satisfied: tqdm>=4.42.1 in S:\A Projects\AI-Powered Customer Support Platform with Ticket ResolutionAgent\.venv\Lib\site-packages (from huggingface_hub[hf_xet]) (4.70.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from huggingface_hub[hf_xet]) (4.16.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.2 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from huggingface_hub[hf_xet]) (1.8.0)
+Requirement already satisfied: colorama in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from tqdm>=4.42.1->huggingface_hub[hf_xet]) (0.4.6)
+Requirement already satisfied: charset_normalizer<4,>=2 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from requests->huggingface_hub[hf_xet]) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in S:\A Projects\AI-Powered Customer Support Platform with Ticket ResolutionAgent\.venv\Lib\site-packages (from requests->huggingface_hub[hf_xet]) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from requests->huggingface_hub[hf_xet]) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\.venv\Lib\site-packages (from requests->huggingface_hub[hf_xet]) (2026.7.22)
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> python scripts/check_environment.py           
+Python: 3.11.0
+Dataset exists: True (S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot\data\aa_dataset-tickets-multi-lang-5-2-50-version.csv)
+torch: OK 2.14.1+cu130
+  CUDA available: True
+  CUDA build: 13.0
+  GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+transformers: OK 4.57.6
+datasets: OK 4.8.5
+sentence_transformers: OK 5.7.0
+chromadb: OK 1.5.9
+fastapi: OK 0.143.1
+streamlit: OK 1.65.0
+Ollama: reachable at http://localhost:11434
+Configured model (mistral:latest) present: True
+Installed models: ['gemma4:latest', 'mistral:latest', 'gemma3:4b', 'gemma2:latest', 'gemma3:latest', 'llama3.2-vision:latest', 'qwen3.8:latest', 'llama3:latest']
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> python scripts/index_knowledge_base.py --reset
+Loaded 2 files and prepared 168 chunks.
+Indexed 64/168 chunks
+Indexed 128/168 chunks
+Indexed 168/168 chunks
+Chroma collection ready at S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot\artifacts\chroma; total chunks: 168
+(.venv) (base) PS S:\A Projects\AI-Powered Customer Support Platform with Ticket Resolution Agent\SupportPilot-codebase\SupportPilot> 

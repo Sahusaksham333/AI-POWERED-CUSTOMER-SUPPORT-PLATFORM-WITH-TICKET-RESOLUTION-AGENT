@@ -1,33 +1,21 @@
-# SupportPilot Frontend Update
+# SupportPilot Frontend
 
-This folder is designed to replace the existing `SupportPilot/frontend/` directory. The backend, database, models, API endpoints, and other project files are not modified.
+This frontend contains the portal selector, administrator interface, and customer support workspace.
 
-## Folder layout
+## Customer workspace additions
 
-- `index.html` — portal selector (User or Administrator)
-- `portal.css` — styling for the portal selector
-- `user/` — user sign-in/sign-up prototype and support ticket interface
-- `admin/` — the existing admin ticket dashboard, moved into its own folder with a portal-switch link
+- Backend-backed email/password account creation and sign-in.
+- Cross-device ticket history under **My tickets**.
+- A status progress tracker and chronological ticket activity timeline.
+- Owner-scoped ticket lookup and AI-assisted response generation.
+- Same-origin API requests (`API = ""`) so the UI works through a public HTTPS reverse tunnel without pointing remote browsers at their own `localhost`.
 
-## Install into the project
+## Installation
 
-1. Extract this ZIP.
-2. Open the extracted `frontend` folder.
-3. Copy the contents of this `frontend` folder into:
-   `SupportPilot-codebase/SupportPilot/frontend/`
-4. Replace the old frontend files when prompted. Keep a backup of the old folder first if you want to restore it later.
-5. Start the API from the `SupportPilot` project directory:
+Copy this `frontend/` directory into the SupportPilot project root, replacing the old `frontend/` directory after making a backup. The FastAPI application must serve this directory at `/`.
 
-   ```powershell
-   uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
-   ```
+The user interface requires the additive backend module `app/supportpilot/user_portal.py` and the small `app/main.py` registration patch supplied in `README_USER_HISTORY.md`. Copying only the frontend is insufficient for server-side registration, ticket history, and activity events.
 
-6. Open `http://127.0.0.1:8000/`.
+## Security boundary
 
-The FastAPI app already serves the `frontend` directory at `/`, so the new paths should be available at `/`, `/user/`, and `/admin/`. No backend route changes are required for this navigation structure.
-
-## Important authentication note
-
-The provided backend currently has no user registration, user login, or administrator authentication endpoints. To keep this task limited to the frontend, the user sign-up/sign-in experience is a **browser-only demonstration**; it does not provide real account security. The admin dashboard is also directly accessible at `/admin/`. Do not deploy this publicly or use real/reused passwords until server-side authentication, authorization, and user-specific ticket access are implemented.
-
-The user ticket form calls the existing `/tickets/predict` and `/tickets/resolve` API endpoints. Ticket lookup uses the existing `/tickets/{ticket_id}` endpoint. Since the backend does not currently enforce ticket ownership, ticket IDs should be treated as references, not private access tokens.
+Customer accounts are stored server-side and user ticket routes require a signed bearer token. This prototype does not verify email ownership, implement Google OAuth, or authenticate administrators. The existing admin and legacy ticket API routes must be protected before the public tunnel is used with real customer data.

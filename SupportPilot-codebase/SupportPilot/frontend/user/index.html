@@ -1,72 +1,261 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SupportPilot user support portal">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SupportPilot customer support portal">
+  <meta name="theme-color" content="#f6f8fc">
   <title>SupportPilot | User Support</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=knowledge-assistance-v1">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="../"><span class="brand-mark">✦</span><span><strong>SupportPilot</strong><small>USER SUPPORT PORTAL</small></span></a>
-    <div class="top-actions"><span class="secure-label"><i></i> Support workspace</span><a class="back-link" href="../">Change portal</a></div>
+    <a class="brand" href="../" aria-label="SupportPilot portal home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span><strong>SupportPilot</strong><small>USER SUPPORT PORTAL</small></span>
+    </a>
+    <div class="top-actions">
+      <span class="secure-label"><i aria-hidden="true"></i> Support workspace</span>
+      <a class="back-link" href="../">Change portal</a>
+    </div>
   </header>
+
   <main class="auth-layout" id="authScreen">
     <section class="auth-intro">
       <span class="eyebrow">YOUR SUPPORT, IN ONE PLACE</span>
       <h1>Let's get your<br><span>issue sorted.</span></h1>
-      <p>Tell us what is going wrong. SupportPilot helps organize your request and prepare useful next steps for the support team.</p>
-      <div class="benefit"><span>✓</span><div><strong>Simple ticket submission</strong><small>Explain the issue in your own words.</small></div></div>
-      <div class="benefit"><span>✓</span><div><strong>Clear ticket reference</strong><small>Keep your ticket ID for follow-up.</small></div></div>
-      <div class="benefit"><span>✓</span><div><strong>AI-assisted guidance</strong><small>Suggested responses still require human review.</small></div></div>
+      <p>Submit support requests, view tickets associated with your account, and track each request from submission through resolution.</p>
+      <div class="benefit">
+        <span aria-hidden="true">✓</span>
+        <div><strong>Centralised ticket history</strong><small>See requests raised from any device after signing in.</small></div>
+      </div>
+      <div class="benefit">
+        <span aria-hidden="true">✓</span>
+        <div><strong>Individual progress tracking</strong><small>Review status changes and ticket activity.</small></div>
+      </div>
+      <div class="benefit">
+        <span aria-hidden="true">✓</span>
+        <div><strong>AI-assisted guidance</strong><small>Suggested responses may require support-team review.</small></div>
+      </div>
     </section>
-    <section class="auth-card">
-      <div class="auth-tabs"><button class="auth-tab active" data-auth="signin">Sign in</button><button class="auth-tab" data-auth="signup">Create account</button></div>
-      <div id="authNotice" class="notice hidden" role="status"></div>
+
+    <section class="auth-card" aria-label="Account access">
+      <div class="auth-tabs">
+        <button class="auth-tab active" type="button" data-auth="signin">Sign in</button>
+        <button class="auth-tab" type="button" data-auth="signup">Create account</button>
+      </div>
+      <div id="authNotice" class="notice hidden" role="alert" aria-live="polite"></div>
+
       <form id="signinForm" class="auth-form">
-        <h2>Welcome back</h2><p class="form-hint">Sign in to open your support workspace.</p>
-        <label for="signinEmail">Email address</label><input id="signinEmail" type="email" autocomplete="email" placeholder="you@example.com" required>
-        <label for="signinPassword">Password</label><input id="signinPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required>
-        <button class="btn primary full" type="submit">Sign in <span>→</span></button>
-        <p class="switch-copy">New to SupportPilot? <button type="button" class="text-button" data-auth="signup">Create an account</button></p>
+        <h2>Welcome back</h2>
+        <p class="form-hint">Sign in to access your support workspace and ticket history.</p>
+        <label for="signinEmail">Email address</label>
+        <input id="signinEmail" name="email" type="email" autocomplete="username" placeholder="you@gmail.com" required>
+        <label for="signinPassword">Password</label>
+        <input id="signinPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+        <button class="btn primary full" type="submit">Sign in <span aria-hidden="true">→</span></button>
+        <p class="switch-copy">New to SupportPilot? <button class="text-button" type="button" data-auth="signup">Create an account</button></p>
       </form>
+
       <form id="signupForm" class="auth-form hidden">
-        <h2>Create your account</h2><p class="form-hint">A few details help us keep your request organized.</p>
-        <label for="signupName">Full name</label><input id="signupName" type="text" autocomplete="name" placeholder="Your name" minlength="2" required>
-        <label for="signupEmail">Email address</label><input id="signupEmail" type="email" autocomplete="email" placeholder="you@example.com" required>
-        <label for="signupPassword">Create password</label><input id="signupPassword" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required>
-        <label for="signupConfirm">Confirm password</label><input id="signupConfirm" type="password" autocomplete="new-password" minlength="8" placeholder="Enter it again" required>
-        <button class="btn primary full" type="submit">Create account <span>→</span></button>
-        <p class="switch-copy">Already have an account? <button type="button" class="text-button" data-auth="signin">Sign in</button></p>
+        <h2>Create your account</h2>
+        <p class="form-hint">Use the same email and password when signing in on another device.</p>
+        <label for="signupName">Full name</label>
+        <input id="signupName" name="name" type="text" autocomplete="name" placeholder="Your name" minlength="2" maxlength="120" required>
+        <label for="signupEmail">Email address</label>
+        <input id="signupEmail" name="email" type="email" autocomplete="email" placeholder="you@gmail.com" required>
+        <label for="signupPassword">Create password</label>
+        <input id="signupPassword" name="new-password" type="password" autocomplete="new-password" minlength="8" maxlength="256" placeholder="At least 8 characters" required>
+        <label for="signupConfirm">Confirm password</label>
+        <input id="signupConfirm" name="confirm-password" type="password" autocomplete="new-password" minlength="8" maxlength="256" placeholder="Enter it again" required>
+        <button class="btn primary full" type="submit">Create account <span aria-hidden="true">→</span></button>
+        <p class="switch-copy">Already registered? <button class="text-button" type="button" data-auth="signin">Sign in</button></p>
       </form>
-      <p class="demo-warning">Prototype notice: this sign-in is stored in this browser only. Do not use a real or reused password. Backend authentication is not included in the supplied API.</p>
+
+      <p class="account-notice">Prototype limitation: account email ownership is not verified. This is email-and-password sign-in, not Google OAuth. Do not reuse a sensitive password.</p>
     </section>
   </main>
+
   <main id="workspace" class="workspace hidden">
-    <section class="workspace-heading"><div><span class="eyebrow">USER WORKSPACE</span><h1>Hello, <span id="welcomeName">there</span></h1><p>What can we help you with today?</p></div><button class="btn outline" id="signoutBtn" type="button">Sign out</button></section>
-    <nav class="workspace-nav"><button class="workspace-tab active" data-panel="newTicketPanel">＋ Create a ticket</button><button class="workspace-tab" data-panel="lookupPanel">⌕ Track a ticket</button></nav>
+    <section class="workspace-heading">
+      <div>
+        <span class="eyebrow">USER WORKSPACE</span>
+        <h1>Hello, <span id="welcomeName">there</span></h1>
+        <p>What can we help you with today?</p>
+      </div>
+      <button class="btn outline" id="signoutBtn" type="button">Sign out</button>
+    </section>
+
+    <nav class="workspace-nav" aria-label="User workspace sections">
+      <button class="workspace-tab active" data-panel="newTicketPanel" type="button">＋ Create a ticket</button>
+      <button class="workspace-tab" data-panel="knowledgePanel" type="button">⌕ Knowledge &amp; AI</button>
+      <button class="workspace-tab" data-panel="historyPanel" type="button">▤ My tickets <span class="tab-count" id="historyCount">0</span></button>
+      <button class="workspace-tab" data-panel="lookupPanel" type="button">⌕ Track a ticket</button>
+    </nav>
+
     <section id="newTicketPanel" class="workspace-panel">
-      <div class="panel-heading"><div><h2>Tell us about your issue</h2><p>Include any error message and what you have already tried.</p></div><span class="step-chip">STEP 1 OF 2</span></div>
+      <div class="panel-heading">
+        <div><h2>Tell us about your issue</h2><p>Include any error message and what you have already tried.</p></div>
+        <span class="step-chip">NEW SUPPORT REQUEST</span>
+      </div>
       <form id="ticketForm" class="ticket-form">
         <div class="form-grid">
-          <div class="field"><label for="requesterName">Your name</label><input id="requesterName" required placeholder="Full name"></div>
-          <div class="field"><label for="requesterEmail">Email address</label><input id="requesterEmail" type="email" required placeholder="you@example.com"></div>
-          <div class="field full-field"><label for="subject">What do you need help with?</label><input id="subject" required minlength="3" maxlength="500" placeholder="For example: I cannot sign in to my account"></div>
-          <div class="field full-field"><label for="body">Describe the issue</label><textarea id="body" required minlength="5" rows="5" placeholder="Tell us what happened, any error messages, and what you have tried so far."></textarea><small>Tip: include enough detail so the support team can understand the problem.</small></div>
-          <div class="field"><label for="impact">How much does this affect you?</label><select id="impact"><option value="low">Low — small inconvenience</option><option value="medium" selected>Medium — work is partly affected</option><option value="high">High — important work is blocked</option><option value="critical">Critical — major outage or security concern</option></select></div>
-          <div class="field"><label for="language">Preferred language</label><select id="language"><option value="auto">Detect automatically</option><option value="en">English</option><option value="de">German</option></select></div>
+          <div class="field">
+            <label for="requesterName">Your name</label>
+            <input id="requesterName" type="text" placeholder="Full name" readonly required>
+          </div>
+          <div class="field">
+            <label for="requesterEmail">Account email</label>
+            <input id="requesterEmail" type="email" placeholder="you@gmail.com" readonly required>
+          </div>
+          <div class="field full-field">
+            <label for="subject">What do you need help with?</label>
+            <input id="subject" type="text" minlength="3" maxlength="500" placeholder="For example: I cannot sign in to my account" required>
+          </div>
+          <div class="field full-field">
+            <label for="body">Describe the issue</label>
+            <textarea id="body" rows="5" minlength="5" maxlength="20000" placeholder="Tell us what happened, any error messages, and what you have tried so far." required></textarea>
+            <small>Provide enough detail for the support team to understand the problem.</small>
+          </div>
+          <div class="field">
+            <label for="impact">Business impact</label>
+            <select id="impact">
+              <option value="low">Low — small inconvenience</option>
+              <option value="medium" selected>Medium — work is partly affected</option>
+              <option value="high">High — important work is blocked</option>
+              <option value="critical">Critical — major outage or security concern</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="language">Preferred language</label>
+            <select id="language">
+              <option value="auto">Detect automatically</option>
+              <option value="en">English</option>
+              <option value="de">German</option>
+            </select>
+          </div>
         </div>
-        <div class="form-actions"><span class="privacy-hint">Please don't include passwords or sensitive personal data.</span><button class="btn primary" type="submit" id="submitTicketBtn">Submit ticket <span>→</span></button></div>
+        <div class="form-actions">
+          <span class="privacy-hint">Do not include passwords, payment details, or other sensitive information.</span>
+          <button class="btn primary" id="submitTicketBtn" type="submit">Submit ticket <span aria-hidden="true">→</span></button>
+        </div>
       </form>
       <div id="ticketResult" class="result-card hidden" aria-live="polite"></div>
     </section>
+
+    <section id="knowledgePanel" class="workspace-panel hidden">
+      <div class="panel-heading knowledge-heading">
+        <div>
+          <h2>Knowledge retrieval &amp; AI assistance</h2>
+          <p>Search approved support material or describe an issue to receive AI-generated, source-grounded guidance. Both options use the same indexed knowledge base.</p>
+        </div>
+        <span class="step-chip" id="knowledgeStatus">CHECKING KNOWLEDGE BASE</span>
+      </div>
+
+      <div class="knowledge-grid">
+        <article class="knowledge-feature">
+          <div class="feature-heading">
+            <span class="feature-icon" aria-hidden="true">⌕</span>
+            <div>
+              <h3>Knowledge Retrieval</h3>
+              <p>Find relevant troubleshooting articles and inspect their source excerpts.</p>
+            </div>
+          </div>
+          <form id="knowledgeSearchForm">
+            <div class="field">
+              <label for="knowledgeQuery">What do you want to search?</label>
+              <textarea id="knowledgeQuery" rows="4" minlength="3" maxlength="5000" placeholder="Example: My laptop cannot connect to the corporate VPN after login." required></textarea>
+            </div>
+            <div class="knowledge-controls">
+              <div class="field compact-field">
+                <label for="knowledgeTopK">Results</label>
+                <select id="knowledgeTopK">
+                  <option value="3">3 sources</option>
+                  <option value="4" selected>4 sources</option>
+                  <option value="6">6 sources</option>
+                  <option value="8">8 sources</option>
+                </select>
+              </div>
+              <button class="btn primary" id="knowledgeSearchBtn" type="submit">Search knowledge</button>
+            </div>
+          </form>
+          <div id="knowledgeResults" class="knowledge-results" aria-live="polite">
+            <div class="empty-state compact">Search the knowledge base to view relevant articles here.</div>
+          </div>
+        </article>
+
+        <article class="knowledge-feature assistance-feature">
+          <div class="feature-heading">
+            <span class="feature-icon assistant-icon" aria-hidden="true">✦</span>
+            <div>
+              <h3>AI Assistance</h3>
+              <p>Describe your problem and receive practical next steps informed by retrieved knowledge.</p>
+            </div>
+          </div>
+          <form id="assistanceForm">
+            <div class="field">
+              <label for="assistanceQuery">Describe the issue</label>
+              <textarea id="assistanceQuery" rows="4" minlength="5" maxlength="12000" placeholder="Explain what happened, the error message, and what you have already tried." required></textarea>
+            </div>
+            <div class="knowledge-controls">
+              <div class="field compact-field">
+                <label for="assistanceLanguage">Response language</label>
+                <select id="assistanceLanguage">
+                  <option value="auto" selected>Detect automatically</option>
+                  <option value="en">English</option>
+                  <option value="de">German</option>
+                </select>
+              </div>
+              <button class="btn primary" id="assistanceBtn" type="submit">Generate assistance</button>
+            </div>
+          </form>
+          <div id="assistanceResults" class="knowledge-results" aria-live="polite">
+            <div class="empty-state compact">AI guidance will appear here with the knowledge sources used to prepare it.</div>
+          </div>
+          <p class="assistance-disclaimer">AI-generated guidance is advisory. Follow your organisation's IT and security policies; escalate safety, security, or data-loss incidents to qualified support staff.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="historyPanel" class="workspace-panel hidden">
+      <div class="panel-heading history-heading">
+        <div>
+          <h2>Your ticket history</h2>
+          <p>Tickets associated with <strong id="historyEmail">your account email</strong>. Sign in with this account on another device to access the same history.</p>
+        </div>
+        <button class="btn outline refresh-button" id="refreshHistoryBtn" type="button">↻ Refresh</button>
+      </div>
+      <div class="history-summary" id="historySummary">
+        <div class="history-metric"><small>Total tickets</small><strong>—</strong></div>
+        <div class="history-metric"><small>Active</small><strong>—</strong></div>
+        <div class="history-metric"><small>Resolved</small><strong>—</strong></div>
+      </div>
+      <div id="ticketHistoryList" class="ticket-history-list" aria-live="polite">
+        <div class="empty-state">Your ticket history will appear here.</div>
+      </div>
+      <div id="historyTracker" class="result-card history-tracker hidden" aria-live="polite"></div>
+    </section>
+
     <section id="lookupPanel" class="workspace-panel hidden">
-      <div class="panel-heading"><div><h2>Track your ticket</h2><p>Enter the ticket reference you received after submitting your request.</p></div></div>
-      <form id="lookupForm" class="lookup-form"><div class="field"><label for="lookupId">Ticket ID</label><input id="lookupId" required placeholder="e.g. SP-20261028-ABC123"></div><button class="btn primary" type="submit">Find ticket</button></form>
+      <div class="panel-heading">
+        <div><h2>Track a ticket</h2><p>Enter a ticket reference associated with your signed-in account.</p></div>
+      </div>
+      <form id="lookupForm" class="lookup-form">
+        <div class="field">
+          <label for="lookupId">Ticket ID</label>
+          <input id="lookupId" type="text" placeholder="e.g. SP-20261105-ABC123" required>
+        </div>
+        <button class="btn primary" type="submit" id="lookupButton">Find ticket</button>
+      </form>
       <div id="lookupResult" class="result-card hidden" aria-live="polite"></div>
     </section>
-    <p class="workspace-foot"><a href="../">← Back to portal selection</a><span>AI-generated suggestions may need review by the support team.</span></p>
+
+    <footer class="workspace-foot">
+      <a href="../">← Back to portal selection</a>
+      <span>AI-generated suggestions may need review by the support team.</span>
+    </footer>
   </main>
-  <script src="script.js"></script>
+
+  <script src="script.js?v=knowledge-assistance-v1" defer></script>
 </body>
 </html>

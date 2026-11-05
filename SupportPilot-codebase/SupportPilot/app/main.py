@@ -17,6 +17,7 @@ from .supportpilot.schemas import (
 from .supportpilot.pipeline import TicketPipeline
 from .supportpilot.db import init_db, save_ticket, get_analytics, get_ticket, list_tickets, update_workflow_status
 from .supportpilot.config import ARTIFACTS_DIR
+from .supportpilot.user_portal import create_user_portal_router, record_status_event
 
 pipeline = TicketPipeline()
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -45,6 +46,9 @@ app.add_middleware(
 )
 
 
+
+# Authenticated customer portal routes: registration, login, ticket history and tracking.
+app.include_router(create_user_portal_router(pipeline))
 def _new_ticket_id() -> str:
     return f"SP-{datetime.now(timezone.utc):%Y%m%d}-{uuid4().hex[:6].upper()}"
 
@@ -112,8 +116,11 @@ def get_ticket_by_id(ticket_id: str):
 
 @app.patch("/tickets/{ticket_id}/status")
 def set_ticket_status(ticket_id: str, request: TicketStatusRequest):
+    previous = get_ticket(ticket_id)
     if not update_workflow_status(ticket_id, request.status):
         raise HTTPException(status_code=404, detail="Ticket not found")
+    previous_status = str((previous or {}).get("workflow_status") or "Open")
+    record_status_event(ticket_id, previous_status, request.status)
     return {"ticket_id": ticket_id, "workflow_status": request.status}
 
 
